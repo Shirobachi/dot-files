@@ -1,0 +1,7 @@
+[user]
+	email = simon@hryszko.dev
+	name = Simon Hryszko
+[credential]
+	helper = cache --timeout=300000
+[core]
+	autocrlf = input
