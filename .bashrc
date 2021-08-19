@@ -1,5 +1,6 @@
 # Simon Hryszko @2021
 
+shopt -s expand_aliases
 shopt -s autocd #allow use dir instead cd dir
 HISTSIZE= HISTFILESIZE= #infinite histiry
 
