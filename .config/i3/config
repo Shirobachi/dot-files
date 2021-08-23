@@ -168,5 +168,3 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-set $Locker i3lock && sleep 1
