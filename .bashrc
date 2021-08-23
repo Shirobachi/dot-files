@@ -27,5 +27,6 @@ alias wifi="nmtui"
 alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"'
 alias config='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon'
 alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -a -m "Auto backup!"; /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull && /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push'
+alias watch="watch -n.1"
 
 cat ~/.showOnStart 2> /dev/null
