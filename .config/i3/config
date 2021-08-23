@@ -24,7 +24,7 @@ exec --no-startup-id libinput-gestures-setup start
 exec nm-applet
 exec --no-startup-id dunst
 
-exec xautolock -time 10 -locker 'i3lock-fancy -p' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
+exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec polybar -q main -c ~/.config/polybar/config.ini
 exec copyq
