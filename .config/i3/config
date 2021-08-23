@@ -57,7 +57,7 @@ bindsym $mod+minus exec i3lock-fancy -p
 bindsym $mod+equal exec ~/Scripts/powerMenu.sh
 
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d "intel_backlight" set 5%+
-bindsym XF86MonBrightnessDown exec sudo brightnessctl -d "intel_backlight" set 5%- 
+bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
 
 # Remap keys
 bindsym --release mod1+Shift+Left exec --no-startup-id xdotool key --clearmodifiers Shift+Home 
