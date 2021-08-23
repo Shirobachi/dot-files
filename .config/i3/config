@@ -60,10 +60,10 @@ bindsym XF86MonBrightnessUp exec sudo brightnessctl -d "intel_backlight" set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d "intel_backlight" set 5%- 
 
 # Remap keys
-#bindsym --release mod1+Shift+Left exec --no-startup-id xdotool key --clearmodifiers Shift+Home 
-#bindsym --release mod1+Shift+Right exec --no-startup-id xdotool key --clearmodifiers Shift+End 
-#bindsym --release mod1+Left exec --no-startup-id xdotool key --clearmodifiers Home 
-#bindsym --release mod1+Right exec --no-startup-id xdotool key --clearmodifiers End 
+bindsym --release mod1+Shift+Left exec --no-startup-id xdotool key --clearmodifiers Shift+Home 
+bindsym --release mod1+Shift+Right exec --no-startup-id xdotool key --clearmodifiers Shift+End 
+bindsym --release mod1+Left exec --no-startup-id xdotool key --clearmodifiers Home 
+bindsym --release mod1+Right exec --no-startup-id xdotool key --clearmodifiers End 
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
