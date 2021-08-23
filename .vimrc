@@ -67,7 +67,7 @@ noremap <PageUp> :-5<CR>
 noremap <PageDown> :+5<CR>
 
 " Ctrl-P
-noremap <C-p> :CtrlP<CR>
+noremap <C-p> :CtrlPBuffer<CR>
 
 " Remember file position on exit
 "source $VIMRUNTIME/vimrc_example.vim

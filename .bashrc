@@ -5,7 +5,7 @@ shopt -s autocd #allow use dir instead cd dir
 HISTSIZE= HISTFILESIZE= #infinite histiry
 
 export HISTTIMEFORMAT="%d-%m-%y %T: "
-export PS1="\[\e[5 q\r\]\w \[\e[32m\]⇨\[\e[m\] "
+export PS1="[\u@\h] \w \[\e[32m\]⇨\[\e[m\] "
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export VISUAL=vim;
 export EDITOR=vim;
