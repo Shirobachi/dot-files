@@ -65,13 +65,13 @@ bindsym --release mod1+Shift+Right exec --no-startup-id xdotool key --clearmodif
 bindsym --release mod1+Left exec --no-startup-id xdotool key --clearmodifiers Home 
 bindsym --release mod1+Right exec --no-startup-id xdotool key --clearmodifiers End 
 
-# alternatively, you can use the cursor keys:
+# You can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# alternatively, you can use the cursor keys:
+# You can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
