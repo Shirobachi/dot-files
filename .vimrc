@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'farmergreg/vim-lastplace'
   Plug '907th/vim-auto-save'
   Plug 'wakatime/vim-wakatime'
+  Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 syntax on
@@ -32,12 +33,11 @@ set colorcolumn=100
 let g:auto_save = 1  " enable AutoSave on Vim startup
 set clipboard=unnamedplus
 
-
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-"colorscheme gruvbox
-"set background=dark
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 " toggle changes
 nnoremap <C-E> :UndotreeToggle<CR>:wincmd h<CR>
