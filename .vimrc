@@ -36,8 +36,8 @@ set clipboard=unnamedplus
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-colorscheme gruvbox
-set background=dark
+"colorscheme gruvbox
+"set background=dark
 
 " toggle changes
 nnoremap <C-E> :UndotreeToggle<CR>:wincmd h<CR>

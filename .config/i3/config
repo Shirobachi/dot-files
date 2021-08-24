@@ -54,7 +54,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r exec /home/simon/Scripts/restart.sh
 bindsym $mod+r mode "resize"
 bindsym $mod+minus exec i3lock-fancy -p
-bindsym $mod+equal exec ~/Scripts/powerMenu.sh
+
+bindsym $mod+Shift+Ctrl+s exec "~/Scripts/powerMenu.sh shutdown"
+bindsym $mod+Shift+Ctrl+r exec "~/Scripts/powerMenu.sh restart"
+bindsym $mod+Shift+Ctrl+l exec "~/Scripts/powerMenu.sh logout"
+bindsym $mod+l exec "~/Scripts/powerMenu.sh lock"
 
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
