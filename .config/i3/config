@@ -28,7 +28,7 @@ exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec polybar -q main -c ~/.config/polybar/config.ini
 exec copyq
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p && sleep 1 && google-chrome
+exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome
 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
