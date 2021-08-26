@@ -49,7 +49,7 @@ for file in *; do
 			if [ "$1" == "delete" ]; then
 				rm -rf "$file"
 			else
-				mv "$file" "$HOME/.$2"
+				mv -f "$file" "$HOME/.$2"
 			fi
 			# increment count
 			count=$((count+1))
@@ -60,9 +60,9 @@ for file in *; do
 		if [ "$(find . -name "$(printf '%q' "$file")" -type f -mtime +$(($3 - 1)))" ]; then
 			# delete/mode file
 			if [ "$1" == "delete" ]; then
-				rm "$file"
+				rm -f "$file"
 			else
-				mv "$file" "$HOME/.$2"
+				mv -f "$file" "$HOME/.$2"
 			fi
 			# increment count
 			count=$((count+1))

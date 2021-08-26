@@ -9,6 +9,7 @@ export PS1="\[\e[5 q\r\][\u@\h] \w \[\e[32m\]⇨\[\e[m\] "
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export VISUAL=vim;
 export EDITOR=vim;
+# export network=`echo $(ip route | grep '^default' | awk '{print $5}' | head -n1)`
 
 alias ls='ls --color=auto'
 alias grep='grep -i --colour=auto'
