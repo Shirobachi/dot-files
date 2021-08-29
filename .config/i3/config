@@ -37,7 +37,7 @@ exec numlockx on
 # Key binds
 bindsym $mod+d exec rofi -show run 
 bindsym $mod+Shift+d exec rofi -show ssh
-bindsym $mod+Shift+f exec ~/Scripts/mounter.sh
+bindsym $mod+Shift+f exec ~/Scripts/tiny_scripts/launch.sh
 bindsym $mod+Shift+z exec ~/Scripts/xcompmgrSwitcher.sh
 
 bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh

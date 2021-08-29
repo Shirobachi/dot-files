@@ -503,6 +503,12 @@
     },
     "done": true
   },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_chestplate": "2021-08-28 15:16:22 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/copper_ingot": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
@@ -566,6 +572,12 @@
   "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2021-08-28 12:45:05 +0200"
     },
     "done": true
   },
@@ -893,6 +905,12 @@
     },
     "done": true
   },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "tamed_animal": "2021-08-28 13:18:53 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_polished_blackstone": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
@@ -1160,6 +1178,12 @@
   "minecraft:recipes/building_blocks/birch_planks": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:story/iron_tools": {
+    "criteria": {
+      "iron_pickaxe": "2021-08-28 13:37:33 +0200"
     },
     "done": true
   },
@@ -2759,6 +2783,12 @@
     },
     "done": true
   },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2021-08-28 12:28:13 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_rabbit": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
@@ -2840,6 +2870,12 @@
   "minecraft:recipes/redstone/oak_door": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2021-08-28 20:39:49 +0200"
     },
     "done": true
   },
@@ -3547,7 +3583,13 @@
   },
   "nitk:nitk/ach4.2": {
     "criteria": {
-      "build-lumbermill": "2021-08-27 23:32:50 +0200"
+      "build-adventureguild": "2021-08-28 21:40:12 +0200",
+      "build-fishery": "2021-08-28 20:39:15 +0200",
+      "build-farmplot": "2021-08-28 20:27:56 +0200",
+      "build-mine": "2021-08-28 13:39:19 +0200",
+      "build-drill": "2021-08-28 15:19:52 +0200",
+      "build-lumbermill": "2021-08-27 23:32:50 +0200",
+      "build-home": "2021-08-28 13:10:23 +0200"
     },
     "done": false
   },
@@ -3602,6 +3644,12 @@
   "nitk:nitk/root": {
     "criteria": {
       "get-log": "2021-08-27 22:59:14 +0200"
+    },
+    "done": true
+  },
+  "minecraft:nether/return_to_sender": {
+    "criteria": {
+      "killed_ghast": "2021-08-28 20:36:00 +0200"
     },
     "done": true
   },
@@ -3763,8 +3811,13 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:skeleton": "2021-08-28 12:50:55 +0200",
+      "minecraft:ghast": "2021-08-28 20:36:00 +0200",
       "minecraft:spider": "2021-08-27 23:22:23 +0200",
+      "minecraft:creeper": "2021-08-28 13:56:23 +0200",
       "minecraft:wither_skeleton": "2021-08-27 23:33:10 +0200",
+      "minecraft:shulker": "2021-08-28 18:59:17 +0200",
+      "minecraft:enderman": "2021-08-28 13:58:16 +0200",
       "minecraft:zombie": "2021-08-27 23:15:59 +0200"
     },
     "done": false
@@ -4479,10 +4532,20 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:cold_ocean": "2021-08-28 12:05:50 +0200",
       "minecraft:forest": "2021-08-27 23:10:19 +0200",
+      "minecraft:desert_hills": "2021-08-28 11:48:10 +0200",
+      "minecraft:deep_cold_ocean": "2021-08-28 12:20:09 +0200",
+      "minecraft:desert": "2021-08-28 11:38:50 +0200",
+      "minecraft:warm_ocean": "2021-08-28 20:34:21 +0200",
+      "minecraft:deep_lukewarm_ocean": "2021-08-28 20:33:08 +0200",
+      "minecraft:savanna_plateau": "2021-08-28 12:01:37 +0200",
       "minecraft:beach": "2021-08-27 23:25:36 +0200",
+      "minecraft:dark_forest": "2021-08-28 12:08:27 +0200",
       "minecraft:river": "2021-08-27 23:07:20 +0200",
+      "minecraft:lukewarm_ocean": "2021-08-28 11:55:10 +0200",
       "minecraft:wooded_hills": "2021-08-27 23:08:50 +0200",
+      "minecraft:savanna": "2021-08-28 11:39:18 +0200",
       "minecraft:plains": "2021-08-27 22:58:51 +0200"
     },
     "done": false
@@ -4538,6 +4601,12 @@
   "minecraft:recipes/redstone/stone_pressure_plate": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/plant_seed": {
+    "criteria": {
+      "wheat": "2021-08-28 20:28:18 +0200"
     },
     "done": true
   },
@@ -5071,7 +5140,13 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
-      "rotten_flesh": "2021-08-27 23:25:00 +0200"
+      "apple": "2021-08-28 11:36:08 +0200",
+      "potato": "2021-08-28 20:47:31 +0200",
+      "bread": "2021-08-28 15:08:37 +0200",
+      "rotten_flesh": "2021-08-27 23:25:00 +0200",
+      "suspicious_stew": "2021-08-28 12:28:12 +0200",
+      "melon_slice": "2021-08-28 11:51:24 +0200",
+      "cooked_chicken": "2021-08-28 11:36:00 +0200"
     },
     "done": false
   },
@@ -5537,6 +5612,12 @@
     },
     "done": true
   },
+  "minecraft:nether/uneasy_alliance": {
+    "criteria": {
+      "killed_ghast": "2021-08-28 20:36:00 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/jack_o_lantern": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
@@ -5564,6 +5645,12 @@
   "minecraft:recipes/building_blocks/red_sandstone_stairs_from_red_sandstone_stonecutting": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2021-08-28 14:03:38 +0200"
     },
     "done": true
   },

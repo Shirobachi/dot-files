@@ -36,7 +36,7 @@ local languages = {
 local logins = {
 --          { '--addic7ed', 'USERNAME', 'PASSWORD' },
   --        { '--legendastv', 'USERNAME', 'PASSWORD' },
-              { '--opensubtitles', 'shirobachi', 'asdfghjkl' },
+              { '--opensubtitles', 'shirobachi', 'Nv009yTpxLFWHvsyvmJJdcfaOGQu2SAAhItJOpd27keThhy1GZEi4l02Cfl6u56B!' },
       --    { '--subscenter', 'USERNAME', 'PASSWORD' },
 }
 --=============================================================================
