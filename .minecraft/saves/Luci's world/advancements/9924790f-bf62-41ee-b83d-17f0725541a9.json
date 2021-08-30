@@ -23,6 +23,12 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_crying_obsidian": {
+    "criteria": {
+      "crying_obsidian": "2021-08-30 20:11:53 +0200"
+    },
+    "done": true
+  },
   "inventory_tweaks:replace/vanilla/sandstone/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -1325,6 +1331,12 @@
     },
     "done": true
   },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2021-08-30 20:29:08 +0200"
+    },
+    "done": false
+  },
   "inventory_tweaks:replace/vanilla/composter/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -2020,6 +2032,12 @@
       "tick": "2021-08-29 16:19:06 +0200"
     },
     "done": false
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2021-08-30 20:29:07 +0200"
+    },
+    "done": true
   },
   "minecraft:recipes/decorations/red_glazed_terracotta": {
     "criteria": {
@@ -7460,6 +7478,12 @@
     },
     "done": true
   },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2021-08-30 20:29:07 +0200"
+    },
+    "done": true
+  },
   "inventory_tweaks:replace/vanilla/end_rod/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -8884,7 +8908,7 @@
   },
   "inventory_tweaks:replace/vanilla/dirt/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-30 20:11:21 +0200"
     },
     "done": false
   },
@@ -8926,7 +8950,7 @@
   },
   "inventory_tweaks:replace/vanilla/stone_brick_slab/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-30 20:43:01 +0200"
     },
     "done": false
   },
@@ -9402,7 +9426,7 @@
   },
   "inventory_tweaks:replace/vanilla/orange_bed/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 19:49:51 +0200"
+      "tick": "2021-08-30 20:12:22 +0200"
     },
     "done": false
   },
@@ -9768,7 +9792,7 @@
   },
   "inventory_tweaks:replace/vanilla/netherrack/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-30 20:11:18 +0200"
     },
     "done": false
   },
@@ -9993,6 +10017,7 @@
       "minecraft:cold_ocean": "2021-08-28 12:05:50 +0200",
       "minecraft:snowy_mountains": "2021-08-30 19:50:17 +0200",
       "minecraft:forest": "2021-08-27 23:10:19 +0200",
+      "minecraft:mountains": "2021-08-30 20:01:27 +0200",
       "minecraft:taiga": "2021-08-30 19:56:55 +0200",
       "minecraft:desert_hills": "2021-08-28 11:48:10 +0200",
       "minecraft:deep_cold_ocean": "2021-08-28 12:20:09 +0200",
@@ -10001,6 +10026,7 @@
       "minecraft:desert": "2021-08-28 11:38:50 +0200",
       "minecraft:frozen_river": "2021-08-30 19:50:28 +0200",
       "minecraft:snowy_beach": "2021-08-30 19:49:48 +0200",
+      "minecraft:bamboo_jungle": "2021-08-30 20:04:22 +0200",
       "minecraft:warm_ocean": "2021-08-28 20:34:21 +0200",
       "minecraft:deep_lukewarm_ocean": "2021-08-28 20:33:08 +0200",
       "minecraft:savanna_plateau": "2021-08-28 12:01:37 +0200",
@@ -10009,7 +10035,9 @@
       "minecraft:river": "2021-08-27 23:07:20 +0200",
       "minecraft:lukewarm_ocean": "2021-08-28 11:55:10 +0200",
       "minecraft:snowy_taiga": "2021-08-30 19:56:24 +0200",
+      "minecraft:wooded_mountains": "2021-08-30 20:01:38 +0200",
       "minecraft:wooded_hills": "2021-08-27 23:08:50 +0200",
+      "minecraft:swamp": "2021-08-30 20:13:12 +0200",
       "minecraft:savanna": "2021-08-28 11:39:18 +0200",
       "minecraft:plains": "2021-08-27 22:58:51 +0200"
     },
@@ -10707,7 +10735,7 @@
   },
   "inventory_tweaks:replace/vanilla/lead/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 19:58:21 +0200"
+      "tick": "2021-08-30 20:24:05 +0200"
     },
     "done": false
   },
