@@ -30,4 +30,4 @@ alias config='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon'
 alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -a -m "Auto backup!"; /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull && /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push'
 alias watch="watch -n.1"
 
-cat ~/.showOnStart 2> /dev/null
+curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70
