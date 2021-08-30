@@ -2311,7 +2311,7 @@
   },
   "inventory_tweaks:replace/vanilla/golden_apple/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 23:08:15 +0200"
+      "tick": "2021-08-29 16:19:06 +0200"
     },
     "done": false
   },
@@ -10589,7 +10589,6 @@
       "apple": "2021-08-28 11:36:08 +0200",
       "potato": "2021-08-28 20:47:31 +0200",
       "bread": "2021-08-28 15:08:37 +0200",
-      "golden_apple": "2021-08-29 23:07:20 +0200",
       "rotten_flesh": "2021-08-27 23:25:00 +0200",
       "suspicious_stew": "2021-08-28 12:28:12 +0200",
       "melon_slice": "2021-08-28 11:51:24 +0200",
