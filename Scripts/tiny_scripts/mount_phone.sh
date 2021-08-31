@@ -2,7 +2,7 @@
 # Check if phone is mounted already
 if [ -d /home/${USER}/Phone ]; then
 	# Ask user if he want to unmount
-	input=$(echo -e "Yes\nNo" | rofi -dmenu -i -p "Unmount phone?")
+	input=$(echo -e "Yes\nNo" | rofi -dmenu -i -p "Unmount phone?" -lines 2 -width 20)
 
 	# if user input is "Yes"
 	if [[ $input == "Yes" ]]; then
@@ -20,7 +20,7 @@ else # if phone is not mounted
 	list="$list"255
 
 	# Ask user for number
-	input=`echo -e "$list" | rofi -dmenu -p "Last octet"`
+	input=`echo -e "$list" | rofi -dmenu -p "Last octet" -width 20`
 
 	# if user input is not empty
 	if [ "$input" != "" ]; then

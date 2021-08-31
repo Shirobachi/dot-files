@@ -10,7 +10,7 @@ menu=(
 )
 
 # Save input from rofi
-input=$(printf '%s\n' "${menu[@]}" | rofi -dmenu -i -p "Script" -lines ${#menu[@]}) 
+input=$(printf '%s\n' "${menu[@]}" | rofi -dmenu -i -p "Script" -width 20 -lines ${#menu[@]}) 
 
 # ================== Mounter ==================
 
