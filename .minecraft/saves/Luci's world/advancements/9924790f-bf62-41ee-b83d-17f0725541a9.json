@@ -7798,7 +7798,8 @@
   },
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
-      "minecraft:cow": "2021-08-31 19:41:50 +0200"
+      "minecraft:cow": "2021-08-31 19:41:50 +0200",
+      "minecraft:chicken": "2021-08-31 20:04:11 +0200"
     },
     "done": false
   },
@@ -9202,6 +9203,7 @@
   },
   "nitk:nitk/ach4.2": {
     "criteria": {
+      "build-chickencoop": "2021-08-31 20:02:43 +0200",
       "build-adventureguild": "2021-08-28 21:40:12 +0200",
       "build-fishery": "2021-08-28 20:39:15 +0200",
       "build-wizardtower": "2021-08-29 22:37:11 +0200",
@@ -10750,7 +10752,7 @@
   },
   "inventory_tweaks:replace/vanilla/lead/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-31 19:35:41 +0200"
+      "tick": "2021-08-31 20:03:09 +0200"
     },
     "done": false
   },
