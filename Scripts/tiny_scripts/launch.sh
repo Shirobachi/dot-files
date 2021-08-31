@@ -6,6 +6,7 @@
 menu=(
 	"Mount your phone (FTP)"
 	"(Un)mount USB"
+	"(Un)moung SSH"
 	"Password generator"
 )
 
@@ -22,6 +23,9 @@ elif [[ $input == "${menu[1]}" ]]; then
 	# run script
 	bash /home/${USER}/Scripts/tiny_scripts/mount_USB.sh
 elif [[ $input == "${menu[2]}" ]]; then
+	# run script
+	bash /home/$USER/Downloads/mount_SSH.sh
+elif [[ $input == "${menu[3]}" ]]; then
 	# run script
 	bash /home/${USER}/Scripts/tiny_scripts/password_generator.sh
 fi
