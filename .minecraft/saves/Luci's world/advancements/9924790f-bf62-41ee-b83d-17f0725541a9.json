@@ -1687,7 +1687,7 @@
   },
   "inventory_tweaks:replace/vanilla/piston/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:22:44 +0200"
     },
     "done": false
   },
@@ -5422,7 +5422,7 @@
   },
   "inventory_tweaks:replace/vanilla/repeater/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:39:37 +0200"
     },
     "done": false
   },
@@ -5716,7 +5716,7 @@
   },
   "inventory_tweaks:replace/vanilla/redstone_torch/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:26:57 +0200"
     },
     "done": false
   },
@@ -6166,7 +6166,7 @@
   },
   "inventory_tweaks:replace/vanilla/stone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:42:45 +0200"
     },
     "done": false
   },
@@ -6376,7 +6376,7 @@
   },
   "inventory_tweaks:replace/vanilla/oak_sign/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-31 10:58:29 +0200"
+      "tick": "2021-08-31 11:11:24 +0200"
     },
     "done": false
   },
@@ -6464,15 +6464,15 @@
     },
     "done": true
   },
-  "inventory_tweaks:replace/vanilla/redstone/_anonymous0/schedule": {
+  "inventory_tweaks:replace/vanilla/soul_sand/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
     },
     "done": false
   },
-  "inventory_tweaks:replace/vanilla/soul_sand/_anonymous0/schedule": {
+  "inventory_tweaks:replace/vanilla/redstone/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:16:41 +0200"
     },
     "done": false
   },
@@ -8668,7 +8668,7 @@
   },
   "inventory_tweaks:replace/vanilla/stone_brick_wall/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:45:36 +0200"
     },
     "done": false
   },
@@ -8950,7 +8950,7 @@
   },
   "inventory_tweaks:replace/vanilla/stone_brick_slab/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 20:43:01 +0200"
+      "tick": "2021-08-31 11:23:06 +0200"
     },
     "done": false
   },
@@ -10501,7 +10501,7 @@
   },
   "inventory_tweaks:replace/vanilla/chiseled_stone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 11:43:52 +0200"
     },
     "done": false
   },
@@ -10621,6 +10621,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "cooked_beef": "2021-08-31 11:09:01 +0200",
       "apple": "2021-08-28 11:36:08 +0200",
       "potato": "2021-08-28 20:47:31 +0200",
       "bread": "2021-08-28 15:08:37 +0200",
@@ -10735,7 +10736,7 @@
   },
   "inventory_tweaks:replace/vanilla/lead/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 20:24:05 +0200"
+      "tick": "2021-08-31 11:36:50 +0200"
     },
     "done": false
   },
