@@ -115,7 +115,7 @@
   },
   "inventory_tweaks:replace/vanilla/oak_planks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 15:20:34 +0200"
     },
     "done": false
   },
@@ -3490,7 +3490,7 @@
   },
   "inventory_tweaks:replace/vanilla/oak_button/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 15:40:24 +0200"
     },
     "done": false
   },
@@ -6166,7 +6166,7 @@
   },
   "inventory_tweaks:replace/vanilla/stone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-31 11:58:51 +0200"
+      "tick": "2021-08-31 15:31:38 +0200"
     },
     "done": false
   },
@@ -7342,7 +7342,7 @@
   },
   "inventory_tweaks:replace/vanilla/iron_axe/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-08-31 15:47:13 +0200"
     },
     "done": false
   },
