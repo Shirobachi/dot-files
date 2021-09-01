@@ -901,7 +901,7 @@
   },
   "inventory_tweaks:replace/vanilla/birch_planks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 23:17:10 +0200"
     },
     "done": false
   },
@@ -1267,7 +1267,7 @@
   },
   "inventory_tweaks:replace/vanilla/barrel/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 14:11:55 +0200"
+      "tick": "2021-09-01 23:35:47 +0200"
     },
     "done": false
   },
@@ -1455,7 +1455,7 @@
   },
   "inventory_tweaks:replace/vanilla/lantern/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 23:33:34 +0200"
     },
     "done": false
   },
@@ -2421,7 +2421,7 @@
   },
   "inventory_tweaks:replace/vanilla/bone_meal/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 23:25:00 +0200"
     },
     "done": false
   },
@@ -5414,7 +5414,7 @@
   },
   "inventory_tweaks:replace/vanilla/soul_lantern/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 23:33:15 +0200"
     },
     "done": false
   },
@@ -10533,7 +10533,7 @@
   },
   "inventory_tweaks:replace/vanilla/chiseled_stone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-31 11:43:52 +0200"
+      "tick": "2021-09-01 23:18:14 +0200"
     },
     "done": false
   },
@@ -11033,7 +11033,7 @@
   },
   "inventory_tweaks:replace/vanilla/dark_oak_planks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 23:22:32 +0200"
     },
     "done": false
   },
