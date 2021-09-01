@@ -8,6 +8,7 @@ menu=(
 	"(Un)mount USB"
 	"(Un)moung SSH"
 	"Password generator"
+	"Change wallpaper"
 )
 
 # Save input from rofi
@@ -28,4 +29,7 @@ elif [[ $input == "${menu[2]}" ]]; then
 elif [[ $input == "${menu[3]}" ]]; then
 	# run script
 	bash /home/${USER}/Scripts/tiny_scripts/password_generator.sh
+elif [[ $input == "${menu[4]}" ]]; then
+	# run script
+	bash /home/${USER}/Scripts/tiny_scripts/wallpaper_changer.sh
 fi
