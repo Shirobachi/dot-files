@@ -24,7 +24,7 @@ elif [[ $input == "${menu[1]}" ]]; then
 	bash /home/${USER}/Scripts/tiny_scripts/mount_USB.sh
 elif [[ $input == "${menu[2]}" ]]; then
 	# run script
-	bash /home/$USER/Downloads/mount_SSH.sh
+	bash /home/$USER/Scripts/tiny_scripts/mount_SSH.sh
 elif [[ $input == "${menu[3]}" ]]; then
 	# run script
 	bash /home/${USER}/Scripts/tiny_scripts/password_generator.sh
