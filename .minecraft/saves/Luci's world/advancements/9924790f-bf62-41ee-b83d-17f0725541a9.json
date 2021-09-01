@@ -1267,7 +1267,7 @@
   },
   "inventory_tweaks:replace/vanilla/barrel/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 14:11:55 +0200"
     },
     "done": false
   },
@@ -1333,7 +1333,9 @@
   },
   "minecraft:nether/explore_nether": {
     "criteria": {
-      "minecraft:crimson_forest": "2021-08-30 20:29:08 +0200"
+      "minecraft:crimson_forest": "2021-08-30 20:29:08 +0200",
+      "minecraft:nether_wastes": "2021-09-01 14:30:36 +0200",
+      "minecraft:soul_sand_valley": "2021-09-01 14:24:34 +0200"
     },
     "done": false
   },
@@ -3427,8 +3429,10 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:blaze": "2021-09-01 14:40:50 +0200",
       "minecraft:skeleton": "2021-08-28 12:50:55 +0200",
       "minecraft:ghast": "2021-08-28 20:36:00 +0200",
+      "minecraft:hoglin": "2021-09-01 14:18:19 +0200",
       "minecraft:spider": "2021-08-27 23:22:23 +0200",
       "minecraft:creeper": "2021-08-28 13:56:23 +0200",
       "minecraft:wither_skeleton": "2021-08-27 23:33:10 +0200",
@@ -4420,7 +4424,7 @@
   },
   "inventory_tweaks:replace/vanilla/cooked_beef/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 14:33:42 +0200"
     },
     "done": false
   },
@@ -5524,7 +5528,7 @@
   },
   "inventory_tweaks:replace/vanilla/cooked_chicken/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 14:36:09 +0200"
     },
     "done": false
   },
@@ -6892,7 +6896,7 @@
   },
   "inventory_tweaks:replace/vanilla/nether_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 14:37:52 +0200"
     },
     "done": false
   },
@@ -8621,7 +8625,7 @@
   },
   "inventory_tweaks:replace/vanilla/cobblestone/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 22:57:58 +0200"
+      "tick": "2021-09-01 13:57:31 +0200"
     },
     "done": false
   },
@@ -9442,7 +9446,7 @@
   },
   "inventory_tweaks:replace/vanilla/orange_bed/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 20:12:22 +0200"
+      "tick": "2021-09-01 14:03:41 +0200"
     },
     "done": false
   },
@@ -9808,7 +9812,7 @@
   },
   "inventory_tweaks:replace/vanilla/netherrack/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 20:11:18 +0200"
+      "tick": "2021-09-01 14:31:20 +0200"
     },
     "done": false
   },
@@ -10122,6 +10126,12 @@
   "minecraft:recipes/combat/leather_boots": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_bastion": {
+    "criteria": {
+      "bastion": "2021-09-01 14:29:01 +0200"
     },
     "done": true
   },
@@ -10638,6 +10648,7 @@
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "cooked_beef": "2021-08-31 11:09:01 +0200",
+      "porkchop": "2021-09-01 14:38:08 +0200",
       "apple": "2021-08-28 11:36:08 +0200",
       "potato": "2021-08-28 20:47:31 +0200",
       "bread": "2021-08-28 15:08:37 +0200",
@@ -10896,7 +10907,7 @@
   },
   "inventory_tweaks:replace/vanilla/terracotta/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 13:57:41 +0200"
     },
     "done": false
   },
@@ -11082,7 +11093,7 @@
   },
   "inventory_tweaks:replace/vanilla/cracked_polished_blackstone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 14:30:02 +0200"
     },
     "done": false
   },
@@ -11203,6 +11214,12 @@
   "minecraft:recipes/misc/coal_from_smelting_coal_ore": {
     "criteria": {
       "has_the_recipe": "2021-08-27 22:59:00 +0200"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2021-09-01 14:33:14 +0200"
     },
     "done": true
   },
@@ -11604,7 +11621,7 @@
   },
   "inventory_tweaks:replace/vanilla/andesite/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 13:58:34 +0200"
     },
     "done": false
   },
