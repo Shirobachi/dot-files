@@ -1117,7 +1117,7 @@
   },
   "inventory_tweaks:replace/vanilla/wooden_pickaxe/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 21:27:07 +0200"
     },
     "done": false
   },
@@ -2562,6 +2562,12 @@
       "tick": "2021-08-29 16:19:06 +0200"
     },
     "done": false
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2021-09-01 21:32:53 +0200"
+    },
+    "done": true
   },
   "inventory_tweaks:replace/vanilla/purple_carpet/_anonymous0/schedule": {
     "criteria": {
@@ -5528,7 +5534,7 @@
   },
   "inventory_tweaks:replace/vanilla/cooked_chicken/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 14:36:09 +0200"
+      "tick": "2021-09-01 21:32:18 +0200"
     },
     "done": false
   },
@@ -6740,7 +6746,7 @@
   },
   "inventory_tweaks:replace/vanilla/crafting_table/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 19:48:28 +0200"
+      "tick": "2021-09-01 21:27:09 +0200"
     },
     "done": false
   },
@@ -6758,7 +6764,7 @@
   },
   "inventory_tweaks:replace/vanilla/blackstone/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 21:43:10 +0200"
     },
     "done": false
   },
@@ -9147,7 +9153,7 @@
   },
   "inventory_tweaks:replace/vanilla/oak_stairs/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 13:18:22 +0200"
+      "tick": "2021-09-01 21:53:06 +0200"
     },
     "done": false
   },
@@ -9992,7 +9998,7 @@
   },
   "inventory_tweaks:replace/vanilla/chest/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 13:39:42 +0200"
+      "tick": "2021-09-01 21:50:28 +0200"
     },
     "done": false
   },
@@ -11495,7 +11501,7 @@
   },
   "inventory_tweaks:replace/vanilla/polished_blackstone_bricks/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 21:43:09 +0200"
     },
     "done": false
   },
