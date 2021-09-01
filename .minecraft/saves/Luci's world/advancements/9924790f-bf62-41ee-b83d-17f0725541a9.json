@@ -2265,7 +2265,7 @@
   },
   "inventory_tweaks:replace/vanilla/anvil/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 22:37:25 +0200"
     },
     "done": false
   },
@@ -4910,7 +4910,7 @@
   },
   "inventory_tweaks:replace/vanilla/dark_oak_sapling/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 22:47:56 +0200"
     },
     "done": false
   },
@@ -6746,7 +6746,7 @@
   },
   "inventory_tweaks:replace/vanilla/crafting_table/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 21:27:09 +0200"
+      "tick": "2021-09-01 22:37:17 +0200"
     },
     "done": false
   },
@@ -8517,7 +8517,7 @@
   },
   "inventory_tweaks:replace/vanilla/birch_sapling/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 22:48:43 +0200"
     },
     "done": false
   },
@@ -10557,7 +10557,7 @@
   },
   "inventory_tweaks:replace/vanilla/diamond_shovel/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-29 16:19:06 +0200"
+      "tick": "2021-09-01 22:43:37 +0200"
     },
     "done": false
   },
@@ -10961,7 +10961,7 @@
   },
   "inventory_tweaks:replace/vanilla/stonecutter/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-08-30 19:41:34 +0200"
+      "tick": "2021-09-01 22:38:20 +0200"
     },
     "done": false
   },
