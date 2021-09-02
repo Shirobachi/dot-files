@@ -27,7 +27,7 @@ exec --no-startup-id dunst
 exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome; /home/simon/Scripts/restart.sh --exit
+exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome && /home/simon/Scripts/restart.sh --exit
 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
