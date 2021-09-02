@@ -899,12 +899,6 @@
     },
     "done": true
   },
-  "inventory_tweaks:replace/vanilla/birch_planks/_anonymous0/schedule": {
-    "criteria": {
-      "tick": "2021-09-01 23:17:10 +0200"
-    },
-    "done": false
-  },
   "inventory_tweaks:replace/vanilla/brain_coral_block/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -914,6 +908,12 @@
   "inventory_tweaks:replace/vanilla/orange_stained_glass_pane/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
+    },
+    "done": false
+  },
+  "inventory_tweaks:replace/vanilla/birch_planks/_anonymous0/schedule": {
+    "criteria": {
+      "tick": "2021-09-01 23:17:10 +0200"
     },
     "done": false
   },
@@ -1855,12 +1855,6 @@
     },
     "done": true
   },
-  "inventory_tweaks:replace/vanilla/oak_door/_anonymous0/schedule": {
-    "criteria": {
-      "tick": "2021-09-02 00:21:40 +0200"
-    },
-    "done": false
-  },
   "inventory_tweaks:replace/vanilla/cyan_stained_glass_pane/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -1870,6 +1864,12 @@
   "inventory_tweaks:replace/vanilla/tuff/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
+    },
+    "done": false
+  },
+  "inventory_tweaks:replace/vanilla/oak_door/_anonymous0/schedule": {
+    "criteria": {
+      "tick": "2021-09-02 00:21:40 +0200"
     },
     "done": false
   },
