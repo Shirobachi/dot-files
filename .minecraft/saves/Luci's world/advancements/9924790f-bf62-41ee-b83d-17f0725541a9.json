@@ -1893,7 +1893,7 @@
   },
   "inventory_tweaks:replace/vanilla/hopper/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 13:32:28 +0200"
+      "tick": "2021-09-02 12:01:02 +0200"
     },
     "done": false
   },
@@ -3436,16 +3436,20 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:blaze": "2021-09-01 14:40:50 +0200",
+      "minecraft:pillager": "2021-09-02 12:16:01 +0200",
       "minecraft:skeleton": "2021-08-28 12:50:55 +0200",
       "minecraft:ghast": "2021-08-28 20:36:00 +0200",
       "minecraft:hoglin": "2021-09-01 14:18:19 +0200",
       "minecraft:spider": "2021-08-27 23:22:23 +0200",
       "minecraft:creeper": "2021-08-28 13:56:23 +0200",
+      "minecraft:slime": "2021-09-02 12:19:17 +0200",
       "minecraft:wither_skeleton": "2021-08-27 23:33:10 +0200",
+      "minecraft:husk": "2021-09-02 12:17:31 +0200",
       "minecraft:shulker": "2021-08-28 18:59:17 +0200",
       "minecraft:cave_spider": "2021-08-29 15:52:15 +0200",
       "minecraft:enderman": "2021-08-28 13:58:16 +0200",
       "minecraft:zombie": "2021-08-27 23:15:59 +0200",
+      "minecraft:drowned": "2021-09-02 12:40:29 +0200",
       "minecraft:zombie_villager": "2021-08-29 15:40:24 +0200"
     },
     "done": false
@@ -3515,6 +3519,12 @@
       "tick": "2021-08-29 16:19:06 +0200"
     },
     "done": false
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "criteria": {
+      "voluntary_exile": "2021-09-02 12:26:35 +0200"
+    },
+    "done": true
   },
   "minecraft:recipes/building_blocks/quartz_pillar_from_quartz_block_stonecutting": {
     "criteria": {
@@ -5862,6 +5872,13 @@
     },
     "done": true
   },
+  "minecraft:husbandry/complete_catalogue": {
+    "criteria": {
+      "textures/entity/cat/siamese.png": "2021-09-02 12:50:57 +0200",
+      "textures/entity/cat/british_shorthair.png": "2021-09-02 12:47:16 +0200"
+    },
+    "done": false
+  },
   "inventory_tweaks:replace/vanilla/waxed_cut_copper_stairs/_anonymous0/schedule": {
     "criteria": {
       "tick": "2021-08-29 16:19:06 +0200"
@@ -6746,7 +6763,7 @@
   },
   "inventory_tweaks:replace/vanilla/crafting_table/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 22:37:17 +0200"
+      "tick": "2021-09-02 12:43:27 +0200"
     },
     "done": false
   },
@@ -7808,6 +7825,7 @@
   },
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
+      "minecraft:sheep": "2021-09-02 12:07:09 +0200",
       "minecraft:cow": "2021-08-31 19:41:50 +0200",
       "minecraft:chicken": "2021-08-31 20:04:11 +0200"
     },
@@ -8931,7 +8949,7 @@
   },
   "inventory_tweaks:replace/vanilla/dirt/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 13:57:15 +0200"
+      "tick": "2021-09-02 12:01:10 +0200"
     },
     "done": false
   },
@@ -9455,7 +9473,7 @@
   },
   "inventory_tweaks:replace/vanilla/orange_bed/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 14:03:41 +0200"
+      "tick": "2021-09-02 12:52:48 +0200"
     },
     "done": false
   },
@@ -10001,7 +10019,7 @@
   },
   "inventory_tweaks:replace/vanilla/chest/_anonymous0/schedule": {
     "criteria": {
-      "tick": "2021-09-01 21:50:28 +0200"
+      "tick": "2021-09-02 12:43:58 +0200"
     },
     "done": false
   },
@@ -10656,6 +10674,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "cooked_porkchop": "2021-09-02 12:14:36 +0200",
       "cooked_beef": "2021-08-31 11:09:01 +0200",
       "porkchop": "2021-09-01 14:38:08 +0200",
       "apple": "2021-08-28 11:36:08 +0200",
