@@ -23,12 +23,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 exec --no-startup-id libinput-gestures-setup start
 exec nm-applet
 exec --no-startup-id dunst
+exec sleep 10 && /home/simon/Scripts/restart.sh
 
 exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome && /home/simon/Scripts/restart.sh --exit
-
+exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome; 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
 exec numlockx on
