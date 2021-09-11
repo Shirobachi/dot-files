@@ -33,7 +33,7 @@ function saveLayout() {
 # if one parameter is passed and it is "--restart" or "-r"
 if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2`" == "$yes" ]; then
 	# save layout
-	dirname "$0"/basename "$0" -sl
+	notify-send	dirname "$0"/basename "$0" -sl
 
 	notify-send "Restarting..."
 	# killall chrome
