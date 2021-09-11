@@ -33,25 +33,25 @@ function saveLayout() {
 # if one parameter is passed and it is "--restart" or "-r"
 if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2`" == "$yes" ]; then
 	# save layout
-	basename "$0" -s
+	dirname "$0"/basename "$0" -sl
 
 	notify-send "Restarting..."
-	killall chrome
-	sleep 1 && systemctl reboot
+	# killall chrome
+	# sleep 1 && systemctl reboot
 
 # if one parameter is passed and it is "--poweroff" or "-p"
-elif [ $# -eq 1 ] && [ "$1" == "--poweroff" ] || [ "$1" == "-p" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 $(basename2 "$0")`" == "$yes" ]; then
+elif [ $# -eq 1 ] && [ "$1" == "--poweroff" ] || [ "$1" == "-p" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2 $(basename2 "$0")`" == "$yes" ]; then
 	# save layout
-	basename "$0" -s
+	basename "$0" -sl
 
 	notify-send "Shutdowning..."
 	killall chrome
 	sleep 1 && systemctl poweroff
 
 # if one parameter is passed and it is "--exit" or "-e"
-elif [ $# -eq 1 ] && [ "$1" == "--exit" ] || [ "$1" == "-e" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 $(basename2 "$0")`" == "$yes" ]; then
+elif [ $# -eq 1 ] && [ "$1" == "--exit" ] || [ "$1" == "-e" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2 $(basename2 "$0")`" == "$yes" ]; then
 	# save layout
-	basename "$0" -s
+	basename "$0" -sl
 
 	notify-send "Logout..."
 	killall chrome
@@ -61,10 +61,12 @@ elif [ $# -eq 1 ] && [ "$1" == "--exit" ] || [ "$1" == "-e" ] && [ "`echo -e \"$
 elif [ $# -eq 1 ] && [ "$1" == "--lock" ] || [ "$1" == "-l" ]; then
 	i3lock-fancy -p
 
-# if one parameter is passed and it is "--save-layout" or "-s"
+# if one parameter is passed and it is "--save-layout" or "-sl"
 elif [ $# -eq 1 ] && [ "$1" == "--save-layout" ] || [ "$1" == "-s" ]; then
 	# run saveLayout()
 	saveLayout && exit 0 || notify-send -u critical "`basename "$0"`" "Could not save layout!"
+
+# if one parameter is passed and it is "--restart-layout" or "-rl"
 
 else
 	echo Wrong parameter!
