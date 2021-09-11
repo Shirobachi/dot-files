@@ -25,7 +25,7 @@ exec nm-applet
 exec --no-startup-id dunst
 exec sleep 10 && /home/simon/Scripts/restart.sh
 
-exec --no-startup $HOME/Scripts/powerMenu.sh -rl
+exec $HOME/Scripts/powerMenu.sh -rl
 exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
