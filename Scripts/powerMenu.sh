@@ -37,6 +37,15 @@ function restoreLayout() {
 			i3-resurrect restore -w $i -d $HOME/.i3
 		fi
 	done
+
+	# Go to 1st workspace
+	i3-msg workspace 1
+
+	# Check if google-chrome is running
+	if pgrep -x "google-chrome" > /dev/null; then
+		# Launch google-chrome on 1st workspace
+		google-chrome
+	fi
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -44,28 +53,28 @@ function restoreLayout() {
 # Flags
 # if one parameter is passed and it is "--restart" or "-r"
 if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2`" == "$yes" ]; then
+	notify-send "Restarting..."
+
 	# save layout
 	`dirname "$0"`/`basename "$0"` -sl|| notify-send basename "$0" "Error during saving layout"
-
-	notify-send "Restarting..."
 	killall chrome
 	sleep 1 && systemctl reboot
 
 # if one parameter is passed and it is "--poweroff" or "-p"
 elif [ $# -eq 1 ] && [ "$1" == "--poweroff" ] || [ "$1" == "-p" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2 $(basename2 "$0")`" == "$yes" ]; then
+	notify-send "Shutdowning..."
+
 	# save layout
 	`dirname "$0"`/`basename "$0"` -sl|| notify-send basename "$0" "Error during saving layout"
-
-	notify-send "Shutdowning..."
 	killall chrome
 	sleep 1 && systemctl poweroff
 
 # if one parameter is passed and it is "--exit" or "-e"
 elif [ $# -eq 1 ] && [ "$1" == "--exit" ] || [ "$1" == "-e" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2 $(basename2 "$0")`" == "$yes" ]; then
+	notify-send "Logout..."
+
 	# save layout
 	`dirname "$0"`/`basename "$0"` -sl|| notify-send basename "$0" "Error during saving layout"
-
-	notify-send "Logout..."
 	killall chrome
 	sleep 1 && i3-msg exit
 

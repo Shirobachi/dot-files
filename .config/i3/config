@@ -25,12 +25,11 @@ exec nm-applet
 exec --no-startup-id dunst
 exec sleep 10 && /home/simon/Scripts/restart.sh
 
-exec $HOME/Scripts/powerMenu.sh -rl
 exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1 && google-chrome; 
+exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1; $HOME/Scripts/powerMenu.sh -rl 
 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
@@ -159,7 +158,6 @@ for_window [class="sample.Main"] floating enable
 for_window [class="copyq"] floating enable
 for_window [class="Deskreen"] floating enable
 for_window [class="Binding of Isaac: Afterbirth"] floating enable
-for_window [class="Lutris"] floating enable
 
 assign [class="Chromium"] $ws1
 
