@@ -37,7 +37,8 @@ fi
 cd $HOME/$2
 
 # Make variable count
-count=0
+files=0
+dirs=0
 
 # loop through files
 for file in *; do
@@ -52,8 +53,7 @@ for file in *; do
 				mv -f "$file" "$HOME/.$2"
 			fi
 			# increment count
-			count=$((count+1))
-			echo "$file"
+			dirs=$((dirs+1))
 		fi
 	else
 		# check if file is older than days
@@ -65,21 +65,35 @@ for file in *; do
 				mv -f "$file" "$HOME/.$2"
 			fi
 			# increment count
-			count=$((count+1))
-			echo "$file"
+			files=$((files+1))
 		fi
 	fi
 done
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-# notify if counte is grater than 0
-if [ "$count" -gt 0 ]; then
+# Make message
+# If files = 0 and dirs = 0, then empty message
+if [ "$files" -eq 0 ] && [ "$dirs" -eq 0 ]; then
+	message=""
+# else if files = 0 and dirs > 0, then message = "$dirs directories"
+elif [ "$files" -eq 0 ] && [ "$dirs" -gt 0 ]; then
+	message="$dirs directorie(s)"
+# else if files > 0 and dirs = 0, then message = "$files files"
+elif [ "$files" -gt 0 ] && [ "$dirs" -eq 0 ]; then
+	message="$files file(s)"
+# else if files > 0 and dirs > 0, then message = "$files files and $dirs directories"
+else
+	message="$files file(s) and $dirs directorie(s)"
+fi
+
+# if dir > 0 or file > 0, then notify-send message
+if [ "$files" -gt 0 ] || [ "$dirs" -gt 0 ]; then
 	# if mode is move
 	if [ "$1" == "move" ]; then
-		notify-send "`basename "$0"`" "Moved $count files and/or directories"
+		notify-send "`basename "$0"`" "Moved $message"
 	else
 		# notify
-		notify-send "`basename "$0"`" "Deleted $count files and/or directories" -u critical
+		notify-send "`basename "$0"`" "Deleted $message" -u critical
 	fi
 fi
