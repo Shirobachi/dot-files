@@ -5,7 +5,7 @@ shopt -s autocd #allow use dir instead cd dir
 HISTSIZE= HISTFILESIZE= #infinite histiry
 
 export HISTTIMEFORMAT="%d-%m-%y %T: "
-export PS1="\[\e[5 q\r\][\u@\h] \w \[\e[32m\]⇨\[\e[m\] "
+export PS1="[\[\e[33m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]] \[\e[35m\]\w\[\e[m\] ⇨ "
 export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:$PATH"
 export VISUAL=vim;
 export EDITOR=vim;
@@ -31,3 +31,7 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 
 curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
+
+function c() {
+	curl -s cheat.sh/$1
+}
