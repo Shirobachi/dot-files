@@ -161,6 +161,9 @@ for_window [class="Binding of Isaac: Afterbirth"] floating enable
 
 assign [class="Chromium"] $ws1
 
+# Make moveable my mouse
+floating_modifier $mod
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # same bindings, but for the arrow keys
