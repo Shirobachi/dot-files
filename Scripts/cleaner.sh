@@ -45,7 +45,7 @@ for file in *; do
 	# check if file is a directory
 	if [ -d "$file" ]; then
 		# check if folder is older than days - 1
-		if [ ! "$(find "$(printf '%q' "$file")" -type f -mtime -$(($3 - 1)))" ]; then
+		if [ ! "$(find "$(printf '%q' "$file")" -mtime -$(($3 - 1)))" ]; then
 			# delete/mode folder
 			if [ "$1" == "delete" ]; then
 				rm -rf "$file"
@@ -56,8 +56,8 @@ for file in *; do
 			dirs=$((dirs+1))
 		fi
 	else
-		# check if file is older than days
-		if [ "$(find . -name "$(printf '%q' "$file")" -type f -mtime +$(($3 - 1)))" ]; then
+		# check if file is older than days - 1
+		if [ "$(find . -name "$(printf '%q' "$file")" -mtime +$(($3 - 1)))" ]; then
 			# delete/mode file
 			if [ "$1" == "delete" ]; then
 				rm -f "$file"
