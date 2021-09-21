@@ -13,6 +13,9 @@ sure=${sure[$randomChoice]}
 
 # Function to save layout 
 function saveLayout() {
+	# Remove old layout
+	rm -rf $HOME/.i3 $HOME/.config/i3-resurrect
+
 	# for 0..9
 	for i in {0..9}; do
 		# save layout
