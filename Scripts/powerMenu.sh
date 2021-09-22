@@ -44,8 +44,8 @@ function restoreLayout() {
 	# Go to 1st workspace
 	i3-msg workspace 1
 
-	# Check if google-chrome is running
-	if pgrep -x "google-chrome" > /dev/null; then
+	# if ps -A | grep "chrome" | wc -l < 0
+	if [ $(ps -A | grep "chrome" | wc -l) -le 0 ]; then
 		# Launch google-chrome on 1st workspace
 		google-chrome
 	fi
