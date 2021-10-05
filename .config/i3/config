@@ -157,7 +157,6 @@ for_window [class="flameshot"] floating enable
 for_window [class="Gestures"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
 for_window [class="Window"] floating enable
-for_window [class="Pavucontrol"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [class="game.Main"] floating enable
 for_window [class="sample.Main"] floating enable
