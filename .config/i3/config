@@ -46,9 +46,7 @@ bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh
 bindsym $mod+v exec copyq show
 
 bindsym Shift+Ctrl+space exec flameshot gui 
-bindsym Insert exec /home/simon/Downloads/ss.sh
-bindsym Shift+Print exec /home/simon/Downloads/ss.sh
-bindsym Print exec flameshot full -c
+bindsym Print exec /home/simon/Scripts/ss.sh
 bindsym $mod+F3 exec gnome-terminal -e "ranger"
 bindsym $mod+Shift+F3 exec xdg-open ~
 
