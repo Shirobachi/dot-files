@@ -31,7 +31,7 @@ def update_count(count_was):
     creds = Credentials.from_authorized_user_file(CREDENTIALS_PATH)
     gmail = discovery.build('gmail', 'v1', credentials=creds)
     labels = gmail.users().labels().get(userId='me', id=args.label).execute()
-    count = labels['messagesUnread']
+    count = labels['messagesTotal']
     print_count(count)
     if not args.nosound and count_was < count and count > 0:
         subprocess.run(['canberra-gtk-play', '-i', 'message'])
