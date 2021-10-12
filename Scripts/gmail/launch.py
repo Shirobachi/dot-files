@@ -52,7 +52,7 @@ while True:
             print(error_prefix + f'"{args.label}" label not found', flush=True)
         else:
             print_count(count_was, True)
-        time.sleep(5)
+        time.sleep(60)
     except (ServerNotFoundError, OSError):
         print_count(count_was, True)
-        time.sleep(5)
+        time.sleep(60)
