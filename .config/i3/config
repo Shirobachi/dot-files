@@ -23,14 +23,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 exec --no-startup-id libinput-gestures-setup start
 exec nm-applet
 exec --no-startup-id dunst
-exec sleep 10 && /home/simon/Scripts/restart.sh
+exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
 
 exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
 exec blueman-tray
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1; $HOME/Scripts/powerMenu.sh -rl 
+exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1; $HOME/Scripts/my-scripts/powerMenu.sh -rl 
 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
@@ -39,28 +39,28 @@ exec numlockx on
 # Key binds
 bindsym $mod+d exec rofi -show run 
 bindsym $mod+Shift+d exec rofi -show ssh
-bindsym $mod+Shift+f exec ~/Scripts/tiny_scripts/launch.sh
-bindsym $mod+Shift+z exec ~/Scripts/xcompmgrSwitcher.sh
+bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
+bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
 bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh
 bindsym $mod+v exec copyq show
 
 bindsym Shift+Ctrl+space exec flameshot gui 
-bindsym Print exec /home/simon/Scripts/ss.sh
+bindsym Print exec /home/simon/Scripts/my-scripts/screenshot-maker.sh
 bindsym $mod+F3 exec gnome-terminal -e "ranger"
 bindsym $mod+Shift+F3 exec xdg-open ~
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
-bindsym $mod+Shift+r exec /home/simon/Scripts/restart.sh
+bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
 bindsym $mod+r mode "resize"
 bindsym $mod+minus exec i3lock-fancy -p
 
-bindsym $mod+Shift+Ctrl+s exec "~/Scripts/powerMenu.sh --poweroff"
-bindsym $mod+Shift+Ctrl+r exec "~/Scripts/powerMenu.sh --restart"
-bindsym $mod+Shift+Ctrl+l exec "~/Scripts/powerMenu.sh --exit"
-bindsym $mod+l exec "~/Scripts/powerMenu.sh --lock"
+bindsym $mod+Shift+Ctrl+s exec "$HOME/Scripts/my-scripts/powerMenu.sh --poweroff"
+bindsym $mod+Shift+Ctrl+r exec "$HOME/Scripts/my-scripts/powerMenu.sh --restart"
+bindsym $mod+Shift+Ctrl+e exec "$HOME/Scripts/my-scripts/powerMenu.sh --exit"
+bindsym $mod+l exec "$HOME/Scripts/my-scripts/powerMenu.sh --lock"
 
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
