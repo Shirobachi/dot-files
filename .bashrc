@@ -36,3 +36,9 @@ colorscript random || curl -s 'https://raw.githubusercontent.com/jlevy/the-art-o
 function c() {
 	curl -s cheat.sh/$1
 }
+
+function HELP(){
+  echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
+  echo "xprop WM_CLASS - check what is window\'s class name"
+  echo "xev - check key code"
+}
