@@ -8,9 +8,6 @@ window=$(xdotool getactivewindow getwindowname | grep -ci "teams\|skype")
 # if $windows is 1, then the window is teams
 if [ $window -eq 1 ]; then
 
-	xdotool mousemove 0 0
-	xdotool click 1
-	sleep .4
 	flameshot full -c
 
 	# Go to 1 workspace
