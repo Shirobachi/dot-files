@@ -39,6 +39,17 @@ function c() {
 	curl -s cheat.sh/$1
 }
 
+
+function g(){
+  echo -n "Commit message: "
+  read message
+  git add .
+  git commit -m "$message"
+  git push
+  q
+}
+
+
 function HELP(){
   echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
   echo "xprop WM_CLASS - check what is window\'s class name"
