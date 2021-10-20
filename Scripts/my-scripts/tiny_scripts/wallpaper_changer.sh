@@ -33,7 +33,6 @@ for option in "${options[@]}"; do
 	feh --bg-$option "/home/$USER/Wallpapers/$file"
 
 	choose=$(echo -e "No\nYes" | rofi -dmenu -p "$option is ok" -lines 2 -width 40)
-	notify-send "$choose"
 
 	# if user choose Yes, break
 	if [ "$choose" == "Yes" ]; then
