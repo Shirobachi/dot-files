@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Ask user what wallpaper to change to
-options=$(ls /home/$USER/Wallpapers)
+options=$(ls /home/$USER/Wallpapers/cheatsheets)
 lines=$(echo "$options" | wc -l)
 
 # if lines > 10, set 10 as max

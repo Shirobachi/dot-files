@@ -13,6 +13,7 @@ menu=(
 	"(Un)moung SSH"
 	"Password generator"
 	"Change wallpaper"
+	"Random cool wallpaper"
 )
 
 # Save input from rofi
@@ -36,4 +37,7 @@ elif [[ $input == "${menu[3]}" ]]; then
 elif [[ $input == "${menu[4]}" ]]; then
 	# run script
 	bash $SCRIPT_DIR/wallpaper_changer.sh
+elif [[ $input == "${menu[5]}" ]]; then
+	# run random wallpaper
+	feh --randomize --bg-fill ~/Wallpapers/wallpapers
 fi
