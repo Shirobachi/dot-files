@@ -56,7 +56,7 @@ function HELP(){
 	echo "xev - check key code"
 }
 
-ex ()
+function ex ()
 {
 	echo $1
 	if [[ -f "$1" ]] ; then
