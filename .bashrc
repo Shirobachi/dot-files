@@ -27,7 +27,7 @@ alias pip="pip3"
 alias q="exit"
 alias tb="nc termbin.com 9999"
 alias wifi="nmtui"
-alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"'
+alias tree='find . -type d | sed -e "s/[^-][^\/]*\//	|/g" -e "s/|\([^ ]\)/| - \1/"'
 alias config='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon'
 alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -a -m "Auto backup!"; /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull && /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push'
 alias watch="watch -n.1"
@@ -41,17 +41,60 @@ function c() {
 
 
 function g(){
-  echo -n "Commit message: "
-  read message
-  git add .
-  git commit -m "$message"
-  git push
-  q
+	echo -n "Commit message: "
+	read message
+	git add .
+	git commit -m "$message"
+	git push
+	q
 }
 
 
 function HELP(){
-  echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
-  echo "xprop WM_CLASS - check what is window\'s class name"
-  echo "xev - check key code"
+	echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
+	echo "xprop WM_CLASS - check what is window\'s class name"
+	echo "xev - check key code"
+}
+
+ex ()
+{
+	if [[ -f $1 ]] ; then
+		# get $1 basename with no externtion
+		basename=${1%.*}
+
+		# basename is directory
+		if [[ -d "$basename" ]]; then
+			if [[ $(ls "$basename" -1 | wc -l ) -gt 0 ]]; then
+				basename=$basename$RANDOM
+				echo $basename
+				mkdir "$basename"
+			fi
+		else
+			mkdir "$basename"
+		fi
+
+		case $1 in
+			*.zip) 
+				unzip "$1" -d "$basename"
+			;;
+
+			*.tar.bz2)   tar xjf $1   ;;
+			*.tar.gz)    tar xzf $1   ;;
+			*.bz2)       bunzip2 $1   ;;
+			*.rar)       unrar x $1   ;;
+			*.gz)        gunzip $1    ;;
+			*.tar)       tar xf $1    ;;
+			*.tbz2)      tar xjf $1   ;;
+			*.tgz)       tar xzf $1   ;;
+			*.zip)       unzip $1     ;;
+			*.Z)         uncompress $1;;
+			*.7z)        7z x $1      ;;
+			*.deb)       ar x $1      ;;
+			*.tar.xz)    tar xf $1    ;;
+			*.tar.zst)   unzstd $1    ;;
+			*)           echo "'$1' cannot be extracted via ex()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
 }
