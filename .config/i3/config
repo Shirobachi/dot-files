@@ -26,7 +26,7 @@ exec --no-startup-id dunst
 exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
 
 exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
-exec xautolock -time 10 -locker 'i3lock-fancy' -notify 30 -notifier 'notify-send "Screen locked in 30 seconds"' &
+exec xautolock -time 1 -locker '$home/Scripts/my-scripts/locker.sh' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
 exec blueman-tray
