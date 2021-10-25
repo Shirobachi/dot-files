@@ -81,3 +81,7 @@ function ex ()
 		echo "'$1' is not a valid file"
 	fi
 }
+
+function CODE(){
+  code $1 && q
+}
