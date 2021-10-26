@@ -42,6 +42,7 @@ bindsym $mod+Shift+d exec rofi -show ssh
 bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
 bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
+bindsym $mod+Shift+equal exec $HOME/Scripts/my-scripts/sendToNotion.sh
 bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh
 bindsym $mod+v exec copyq show
 
