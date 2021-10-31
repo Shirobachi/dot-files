@@ -20,18 +20,68 @@ alias ll="ls -lAh"
 alias r="ranger"
 alias a="sudo apt"
 alias A="sudo apt install"
+alias p="pip"
+alias P="pip install"
 alias python="python3"
 alias pip="pip3"
 alias q="exit"
 alias tb="nc termbin.com 9999"
 alias wifi="nmtui"
-alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"'
 alias config='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon'
 alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -a -m "Auto backup!"; /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull && /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push'
 alias watch="watch -n.1"
+alias xclipp="xclip -selection clipboard"
 
 colorscript random || curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
 
 function c() {
 	curl -s cheat.sh/$1
+}
+
+
+function g(){
+	echo -n "Commit message: "
+	read message
+	git add .
+	git commit -m "$message"
+	git push
+	q
+}
+
+
+function HELP(){
+	echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
+	echo "xprop WM_CLASS - check what is window\'s class name"
+	echo "xev - check key code"
+}
+
+function ex ()
+{
+	echo $1
+	if [[ -f "$1" ]] ; then
+		basename=${1%.*}
+
+		if [[ -d "$basename" ]]; then
+			if [[ $(ls "$basename" -1 | wc -l ) -gt 0 ]]; then
+				basename=$basename$RANDOM
+				echo $basename
+				mkdir "$basename"
+			fi
+		else
+			mkdir "$basename"
+		fi
+
+		case $1 in
+			*.zip) unzip "$1" -d "$basename" ;;
+			*.tar.gz) tar -xzf "$1" -C "$basename" ;;
+
+			*) echo "'$1' cannot be extracted via ex()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
+function CODE(){
+  code $1 && q
 }
