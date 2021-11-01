@@ -31,6 +31,7 @@ exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
 exec blueman-tray
 exec feh --randomize --bg-fill ~/Wallpapers/wallpapers* && i3lock-fancy -p; sleep 1; $HOME/Scripts/my-scripts/powerMenu.sh -rl 
+exec play-with-mpv
 
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
