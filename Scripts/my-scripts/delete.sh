@@ -16,3 +16,4 @@ for arg in "$@"; do
 		fi
 	fi
 done
+
