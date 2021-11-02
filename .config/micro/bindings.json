@@ -1,0 +1,11 @@
+{
+    "Ctrl-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+    "Enter": "EndOfLine,InsertNewline",
+
+    "Ctrl-d": "SpawnMultiCursor",
+    "Alt-d": "DuplicateLine",
+
+	"CtrlBackslash": "VSplit",
+	"CtrlUnderscore": "HSplit",
+}
