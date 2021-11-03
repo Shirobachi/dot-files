@@ -11,6 +11,10 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
+  - trigger: ":degree"
+    replace: "°"
+
+  
   - trigger: ":@"
     replace: "simon@hryszko.dev"
 
