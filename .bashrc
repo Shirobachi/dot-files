@@ -53,6 +53,7 @@ function HELP(){
 	echo "ncdu (ang. NCurses Disk Usage) - see usage space!"
 	echo "xprop WM_CLASS - check what is window\'s class name"
 	echo "xev - check key code"
+	echo "bc (ang. Basic Calculator) - Hmmm. not gonna belive it's basic calculator"
 }
 
 function ex ()
@@ -89,3 +90,4 @@ function CODE(){
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

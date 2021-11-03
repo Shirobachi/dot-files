@@ -33,6 +33,10 @@ exec blueman-tray
 exec feh --randomize --bg-fill ~/Wallpapers/wallpapers* && i3lock-fancy -p; sleep 1; $HOME/Scripts/my-scripts/powerMenu.sh -rl 
 exec play-with-mpv
 
+# Change time/date language
+exec LC_TIME=en_US.UTF-8
+
+
 # Keep numlock on
 bindsym --release Num_Lock exec numlockx on 
 exec numlockx on

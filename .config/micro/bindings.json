@@ -5,5 +5,13 @@
     "Ctrl-d": "SpawnMultiCursor",
     "CtrlBackslash": "VSplit",
     "CtrlUnderscore": "HSplit",
-    "Enter": "EndOfLine,InsertNewline"
+    "Enter": "EndOfLine,InsertNewline",
+    
+     "CtrlUp": "MoveLinesUp",
+    "CtrlDown": "MoveLinesDown",
+    
+    "AltUp": "CursorStart",
+    "AltDown": "CursorEnd",
+
+	"CtrlDelete": "DeleteWordRight",
 }
