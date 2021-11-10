@@ -32,7 +32,7 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 
-colorscript random || curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
+curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
 
 function c() {
 	curl -s cheat.sh/$1

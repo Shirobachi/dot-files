@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -lt 2 ] || [ $# -gt 3 ] ; then
-	echo 'Wrong parameters!'
+	echo '-1'
 	# $1=Town name
 	# $2=API KEY
 	exit 2

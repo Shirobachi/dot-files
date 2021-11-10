@@ -3,7 +3,7 @@
 input=$(echo '' | rofi -dmenu -i -p "Send to notion" -width 90 -lines 0) 
 input=${input// / }
 
-data="{\"parent\":{\"database_id\":\"`cat $HOME/.env/notion-db-id`\"},\"properties\":{\"Name\":{\"title\":[{\"text\":{\"content\":\""$input"\"}}]}}}"
+data="{\"parent\":{\"database_id\":\"`cat $HOME/.env/notion-db-id | head -1`\"},\"properties\":{\"Name\":{\"title\":[{\"text\":{\"content\":\""$input"\"}}]}}}"
 
 #if input no empty
 if [ -n "$input" ]; then
