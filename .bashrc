@@ -75,6 +75,7 @@ function ex ()
 		case $1 in
 			*.zip) unzip "$1" -d "$basename" ;;
 			*.tar.gz) tar -xzf "$1" -C "$basename" ;;
+			*.rar) unrar e "$1" "$basename" ;;
 
 			*) echo "'$1' cannot be extracted via ex()" ;;
 		esac
@@ -90,4 +91,3 @@ function CODE(){
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
