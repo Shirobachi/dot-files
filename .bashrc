@@ -32,7 +32,8 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 
-curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
+# curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
+echo "Welcome $(whoami), what can I do for you?" | cowsay
 
 function c() {
 	curl -s cheat.sh/$1
@@ -85,10 +86,11 @@ function ex ()
 	fi
 }
 
+function EX (){
+	ex $1 && q
+}
+
+
 function CODE(){
   code $1 && q
 }
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

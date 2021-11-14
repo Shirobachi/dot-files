@@ -7,7 +7,7 @@
     "CtrlUnderscore": "HSplit",
     "Enter": "EndOfLine,InsertNewline",
     
-     "CtrlUp": "MoveLinesUp",
+    "CtrlUp": "MoveLinesUp",
     "CtrlDown": "MoveLinesDown",
     
     "AltUp": "CursorStart",
