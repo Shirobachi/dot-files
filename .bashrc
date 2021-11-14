@@ -54,6 +54,7 @@ function HELP(){
 	echo "xprop WM_CLASS - check what is window\'s class name"
 	echo "xev - check key code"
 	echo "bc (ang. Basic Calculator) - Hmmm. not gonna belive it's basic calculator"
+	echo "software-properties-gtk - run the update app (change PPA, update policy, drivers and so on)"
 }
 
 function ex ()
