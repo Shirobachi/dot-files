@@ -9,8 +9,12 @@ set $mod Mod4
 font xft:URWGothic-Book 15
 
 # Border
-default_border pixel 3
-default_floating_border normal
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
+
+#default_border pixel 3
+#default_floating_border normal
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
