@@ -81,6 +81,7 @@ set -x
 				*.zip) unzip "$1" -d "$basename" ;;
 				*.tar.gz) tar -xzf "$1" -C "$basename" ;;
 				*.rar) unrar e "$1" "$basename" ;;
+				*.tar.xz) tar -xf "$1" -C "$basename";;
 
 				*) echo "'$1' cannot be extracted via ex()" ;;
 			esac
