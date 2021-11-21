@@ -5,7 +5,6 @@
     "Ctrl-d": "SpawnMultiCursor",
     "CtrlBackslash": "VSplit",
     "CtrlUnderscore": "HSplit",
-    "Enter": "EndOfLine,InsertNewline",
     
     "CtrlUp": "MoveLinesUp",
     "CtrlDown": "MoveLinesDown",
