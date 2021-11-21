@@ -50,7 +50,12 @@ for file in *; do
 			if [ "$1" == "delete" ]; then
 				rm -rf "$file"
 			else
-				mv -f "$file" "$HOME/.$2"
+				# if folder or file is exist
+				if [ -e "$HOME/.$2/$file" ]; then
+					mv -f "$file" "$HOME/.$2/$RANDOM$file"
+				else
+					mv -f "$file" "$HOME/.$2"
+				fi
 			fi
 			# increment count
 			dirs=$((dirs+1))
@@ -62,7 +67,12 @@ for file in *; do
 			if [ "$1" == "delete" ]; then
 				rm -f "$file"
 			else
-				mv -f "$file" "$HOME/.$2"
+				# if folder or file is exist
+				if [ -e "$HOME/.$2/$file" ]; then
+					mv -f "$file" "$HOME/.$2/$RANDOM$file"
+				else
+					mv -f "$file" "$HOME/.$2"
+				fi
 			fi
 			# increment count
 			files=$((files+1))
