@@ -35,7 +35,7 @@ alias xclipp="xclip -selection clipboard"
 alias map="telnet mapscii.me"
 
 # curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
-curl -s https://icanhazdadjoke.com | cowsay
+ping -c1 1.1.1.1 >/dev/null 2>&1  && curl -s https://icanhazdadjoke.com | cowsay || echo Welcom $(whoami) in the internet! | cowsay
 
 function c() {
 	curl -s cheat.sh/$1
