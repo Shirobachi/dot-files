@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# -*- coding: utf-8 -*-
 
 # v. 2.10
 # Interactive subtitles for `mpv` for language learners.
@@ -23,7 +24,7 @@ from PyQt5.QtCore import Qt, QThread, QObject, pyqtSignal, pyqtSlot, QSize
 from PyQt5.QtWidgets import QApplication, QFrame, QVBoxLayout, QHBoxLayout, QLabel, QSizePolicy, QWidget
 from PyQt5.QtGui import QPalette, QPaintEvent, QPainter, QPainterPath, QFont, QFontMetrics, QColor, QPen, QBrush
 
-pth = os.path.expanduser('/home/simon/Scripts/mpv-interSubs/')
+pth = os.path.expanduser('~/.config/mpv/scripts/')
 os.chdir(pth)
 import interSubs_config as config
 
