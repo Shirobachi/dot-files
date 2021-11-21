@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 # v. 2.9
 # Interactive subtitles for `mpv` for language learners.

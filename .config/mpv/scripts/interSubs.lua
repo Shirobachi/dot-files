@@ -10,7 +10,7 @@
 autostart_in = {''}
 
 -- for Mac change python3 to python or pythonw
-start_command = 'python "%s" "%s" "%s"'
+start_command = 'python3 "%s" "%s" "%s"'
 
 -- recomend to have these in tmpfs, or at least ssd.
 sub_file = '/tmp/mpv_sub'
