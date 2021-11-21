@@ -32,8 +32,10 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 
+alias map="telnet mapscii.me"
+
 # curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
-echo "Welcome $(whoami), what can I do for you?" | cowsay
+curl -s https://icanhazdadjoke.com | cowsay
 
 function c() {
 	curl -s cheat.sh/$1
@@ -58,40 +60,6 @@ function HELP(){
 	echo "software-properties-gtk - run the update app (change PPA, update policy, drivers and so on)"
 }
 
-function ex ()
-{
-set -x
-	if [[ $# -ne 1 ]]; then
-		echo "You did not passed 1 parameter as expected!"
-	else
-		if [[ -f "$1" ]] ; then
-			basename=${1%.*}
-
-			if [[ -d "$basename" ]]; then
-				if [[ $(ls "$basename" -1 | wc -l ) -gt 0 ]]; then
-					basename=$basename$RANDOM
-					mkdir "$basename"
-				fi
-			else
-				mkdir "$basename"
-				# refactor mkdir
-			fi
-
-			case $1 in
-				*.zip) unzip "$1" -d "$basename" ;;
-				*.tar.gz) tar -xzf "$1" -C "$basename" ;;
-				*.rar) unrar e "$1" "$basename" ;;
-				*.tar.xz) tar -xf "$1" -C "$basename";;
-
-				*) echo "'$1' cannot be extracted via ex()" ;;
-			esac
-		else
-			echo "'$1' is not a valid file"
-		fi
-	fi
-}
-
-
 function CODE(){
-  code $0 && q
+  code $1 && q
 }
