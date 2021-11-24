@@ -34,9 +34,6 @@ alias xclipp="xclip -selection clipboard"
 
 alias map="telnet mapscii.me"
 
-# curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
-ping -c1 1.1.1.1 >/dev/null 2>&1  && curl -s https://icanhazdadjoke.com | cowsay || echo Welcom $(whoami) in the internet! | cowsay
-
 function c() {
 	curl -s cheat.sh/$1
 }
@@ -63,3 +60,10 @@ function HELP(){
 function CODE(){
   code $1 && q
 }
+
+if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
+    fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
+
+	# curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W70 2>/dev/null
+
+fi
