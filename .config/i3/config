@@ -171,7 +171,7 @@ for_window [class="sample.Main"] floating enable
 for_window [class="copyq"] floating enable
 for_window [class="Deskreen"] floating enable
 for_window [class="Binding of Isaac: Afterbirth"] floating enable
-for_window [class="Gnome-terminal"] floating enable
+#for_window [class="Gnome-terminal"] floating enable
 
 assign [class="Chromium"] $ws1
 
