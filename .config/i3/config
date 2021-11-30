@@ -61,7 +61,7 @@ bindsym Print exec /home/simon/Scripts/my-scripts/screenshot-maker.sh
 bindsym $mod+F3 exec gnome-terminal -e "ranger"
 bindsym $mod+Shift+F3 exec xdg-open ~
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal -e "fish"
 bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
