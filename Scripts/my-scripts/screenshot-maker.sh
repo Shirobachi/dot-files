@@ -15,7 +15,11 @@ if [ $window -eq 1 ]; then
 
 	# symulate ctrl + v after delay
 	sleep 0.5 &&
-	xdotool getactivewindow key ctrl+v && 
+	
+	xdotool getactivewindow key super+v && 
+	sleep 0.5 &&
+	xdotool key Return &&
+	sleep 0.5 &&
 
 	# confirm return
 	xdotool key Return &&
