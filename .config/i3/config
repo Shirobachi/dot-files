@@ -29,6 +29,7 @@ exec nm-applet
 exec --no-startup-id dunst
 exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
 exec xcompmgr
+exec kdeconnect-indicator
 
 exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
@@ -61,7 +62,8 @@ bindsym Print exec /home/simon/Scripts/my-scripts/screenshot-maker.sh
 bindsym $mod+F3 exec gnome-terminal -e "ranger"
 bindsym $mod+Shift+F3 exec xdg-open ~
 
-bindsym $mod+Return exec gnome-terminal -e "zsh"
+bindsym $mod+Return exec gnome-terminal -e zsh 
+bindsym $mod+Shift+Return exec gnome-terminal 
 bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
