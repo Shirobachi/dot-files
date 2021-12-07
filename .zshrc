@@ -2,10 +2,6 @@ export ZSH="/home/simon/.oh-my-zsh"
 plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
-# infinity history and with timestamp
-HISTSIZE= HISTFILESIZE= #infinite histiry
-export HISTTIMEFORMAT="%d-%m-%y %T: "
-
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
@@ -41,6 +37,7 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help="cat $HOME/Scripts/my-scripts/help_message"
+alias history="history -E"
 
 function c() {
 	curl -s cheat.sh/$1
