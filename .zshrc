@@ -2,6 +2,10 @@ export ZSH="/home/simon/.oh-my-zsh"
 plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# infinity history and with timestamp
+HISTSIZE= HISTFILESIZE= #infinite histiry
+export HISTTIMEFORMAT="%d-%m-%y %T: "
+
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
