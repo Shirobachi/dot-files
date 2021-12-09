@@ -55,11 +55,11 @@ function restoreLayout() {
 
 # Flags
 # if one parameter is passed and it is "--restart" or "-r"
-if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "$(echo -e \""$yes\n$no"\" | rofi -dmenu -p \""$sure"\" -width 10 -lines 2)" == "$yes" ]; then
+if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2`" == "$yes" ]; then
 	notify-send "Restarting..."
 
 	# save layout
-	$(dirname "$0")/$(basename "$0") -sl|| notify-send basename "$0" "Error during saving layout"
+	`dirname "$0"`/`basename "$0"` -sl|| notify-send basename "$0" "Error during saving layout"
 	killall chrome
 	sleep 1 && systemctl reboot
 
