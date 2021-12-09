@@ -34,7 +34,7 @@ fi
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 # Go to the folder
-cd $HOME/$2
+cd "$HOME/$2" || exit
 
 # Make variable count
 files=0
@@ -101,9 +101,9 @@ fi
 if [ "$files" -gt 0 ] || [ "$dirs" -gt 0 ]; then
 	# if mode is move
 	if [ "$1" == "move" ]; then
-		notify-send "`basename "$0"`" "Moved $message"
+		notify-send "$(basename "$0")" "Moved $message"
 	else
 		# notify
-		notify-send "`basename "$0"`" "Deleted $message" -u critical
+		notify-send "$(basename "$0")" "Deleted $message" -u critical
 	fi
 fi

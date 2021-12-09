@@ -1,31 +1,31 @@
 #!/bin/bash
 
 # make an array with options
-sure=( "Sure" "Are you sure" "RU sure" "Do it" "We do it" "Really" )
-yes=( "Yes" "Yeah" "HELLL YEAH" "OH YEAH" "OFC BABy" "non't" )
-no=( "No" "Nope" "Nah" "Naw" "Nawww" "Nawwwww" )
+sure_pack=( "Sure" "Are you sure" "RU sure" "Do it" "We do it" "Really" )
+yes_pack=( "Yes" "Yeah" "HELLL YEAH" "OH YEAH" "OFC BABy" "non't" )
+no_pack=( "No" "Nope" "Nah" "Naw" "Nawww" "Nawwwww" )
 
 # make randomized options
 randomChoice=$((RANDOM%6))
-yes=${yes[$randomChoice]}
-no=${no[$randomChoice]}
-sure=${sure[$randomChoice]}
+yes=${yes_pack[$randomChoice]}
+no=${no_pack[$randomChoice]}
+sure=${sure_pack[$randomChoice]}
 
 # Function to save layout 
 function saveLayout() {
 	# Remove old layout
-	rm -rf $HOME/.i3 $HOME/.config/i3-resurrect
+	rm -rf "$HOME/.i3" "$HOME/.config/i3-resurrect"
 
 	# for 0..9
 	for i in {0..9}; do
 		# save layout
-		i3-resurrect save -w $i -d $HOME/.i3
+		i3-resurrect save -w $i -d "$HOME/.i3"
 
 		# check if file $HOME/.i3/workspace_${i}_programs.json has less or equal than 2b and check if file $HOME/.i3/workspace_${i}_layout.json has less or equal than 2b
-		if [ $(wc -c < $HOME/.i3/workspace_${i}_programs.json) -le 2 ] && [ $(wc -c < $HOME/.i3/workspace_${i}_layout.json) -le 2 ]; then
+		if [ "$(wc -c < "$HOME/.i3/workspace_${i}_programs.json")" -le 2 ] && [ "$(wc -c < "$HOME/.i3/workspace_${i}_layout.json")" -le 2 ]; then
 			# remove file $HOME/.i3/workspace_${i}_programs.json and $HOME/.i3/workspace_${i}_layout.json
-			rm $HOME/.i3/workspace_${i}_programs.json 2>/dev/null
-			rm $HOME/.i3/workspace_${i}_layout.json 2>/dev/null
+			rm "$HOME/.i3/workspace_${i}_programs.json" 2>/dev/null
+			rm "$HOME/.i3/workspace_${i}_layout.json" 2>/dev/null
 		fi
 	done
 }
@@ -35,9 +35,9 @@ function restoreLayout() {
 	# for 0..9
 	for i in {0..9}; do
 		# check if file $HOME/.i3/workspace_${i}_programs.json and $HOME/.i3/workspace_${i}_layout.json exists
-		if [ -f $HOME/.i3/workspace_${i}_programs.json ] && [ -f $HOME/.i3/workspace_${i}_layout.json ]; then
+		if [ -f "$HOME/.i3/workspace_${i}_programs.json" ] && [ -f "$HOME/.i3/workspace_${i}_layout.json" ]; then
 			# restore layout
-			i3-resurrect restore -w $i -d $HOME/.i3
+			i3-resurrect restore -w "$i" -d "$HOME/.i3"
 		fi
 	done
 
@@ -45,7 +45,7 @@ function restoreLayout() {
 	i3-msg workspace 1
 
 	# if ps -A | grep "chrome" | wc -l < 0
-	if [ $(ps -A | grep "chrome" | wc -l) -le 0 ]; then
+	if [ "$(pgrep -f "chrome" | wc -l)" -le 0 ]; then
 		# Launch google-chrome on 1st workspace
 		google-chrome
 	fi
@@ -55,11 +55,11 @@ function restoreLayout() {
 
 # Flags
 # if one parameter is passed and it is "--restart" or "-r"
-if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "`echo -e \"$yes\n$no\" | rofi -dmenu -p \"$sure\" -width 10 -lines 2`" == "$yes" ]; then
+if [ $# -eq 1 ] && [ "$1" == "--restart" ] || [ "$1" == "-r" ] && [ "$(echo -e \""$yes\n$no"\" | rofi -dmenu -p \""$sure"\" -width 10 -lines 2)" == "$yes" ]; then
 	notify-send "Restarting..."
 
 	# save layout
-	`dirname "$0"`/`basename "$0"` -sl|| notify-send basename "$0" "Error during saving layout"
+	$(dirname "$0")/$(basename "$0") -sl|| notify-send basename "$0" "Error during saving layout"
 	killall chrome
 	sleep 1 && systemctl reboot
 
