@@ -175,6 +175,7 @@ for_window [class="copyq"] floating enable
 for_window [class="Deskreen"] floating enable
 for_window [class="Binding of Isaac: Afterbirth"] floating enable
 for_window [class="VirtScreen"] floating enable
+for_window [class="Crystal Launcher"] floating enable
 #for_window [class="Gnome-terminal"] floating enable
 
 assign [class="Chromium"] $ws1
