@@ -1,5 +1,5 @@
 export ZSH="/home/simon/.oh-my-zsh"
-plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting command-time)
 source $ZSH/oh-my-zsh.sh
 
 # Enabling and setting git info var to be used in prompt config.
@@ -48,3 +48,19 @@ function CODE(){
 }
 
 fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
+
+
+
+
+
+# If command execution time above min. time, plugins will not output time.
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+
+# Message to display (set to "" for disable).
+ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
+
+# Message color.
+ZSH_COMMAND_TIME_COLOR="cyan"
+
+# Exclude some commands
+ZSH_COMMAND_TIME_EXCLUDE=(vim mcedit)
