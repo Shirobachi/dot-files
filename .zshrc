@@ -1,5 +1,5 @@
 export ZSH="/home/simon/.oh-my-zsh"
-plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting command-time)
+plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Enabling and setting git info var to be used in prompt config.
@@ -13,8 +13,21 @@ precmd() {
 # Enable substitution in the prompt.
 setopt prompt_subst
 
+# Make time execution
+ETIME=0
+function preexec() {
+    typeset -gi CALCTIME=1
+    typeset -gi CMDSTARTTIME=SECONDS
+}
+function precmd() {
+    if (( CALCTIME )) ; then
+        typeset -gi ETIME=SECONDS-CMDSTARTTIME
+    fi
+    typeset -gi CALCTIME=0
+}
+
 PROMPT="[%F{yellow}%n%F{green}@%F{blue}%m%f] %F{magenta}%~ %F{green}⇨%f "
-RPROMPT='%F{red}%(?..%? )${vcs_info_msg_0_} %F{magenta}[%D{%l:%M:%S} ]'
+RPROMPT='%(?.%F{cyan}Took ${ETIME}s.%F{red}Retuned: %?)${vcs_info_msg_0_} %F{magenta}[ %D{%l:%M:%S} ]'
 
 export LANG=en_US.UTF-8
 export VISUAL=micro;
@@ -53,14 +66,3 @@ fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
 
 
 
-# If command execution time above min. time, plugins will not output time.
-ZSH_COMMAND_TIME_MIN_SECONDS=3
-
-# Message to display (set to "" for disable).
-ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
-
-# Message color.
-ZSH_COMMAND_TIME_COLOR="cyan"
-
-# Exclude some commands
-ZSH_COMMAND_TIME_EXCLUDE=(vim mcedit)
