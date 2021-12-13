@@ -32,7 +32,7 @@ exec xcompmgr
 exec kdeconnect-indicator
 exec notify-send "Last login information" "$(last reboot | head -2 | tail -1 | cut -d\. -f 3 | cut -d " " -f 2,3,4,5,6,7,8,9)"
 
-exec --no-startup-id /home/$USER/Scripts/i3-alternating-layout/alternating_layouts.py
+exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec copyq
