@@ -12,6 +12,7 @@ if [ $window -eq 1 ]; then
 
 	# Go to 1 workspace
 	i3-msg workspace 9 &&
+	sleep 0.5 &&
 
 	# symulate ctrl + v after delay
 	xdotool getactivewindow key ctrl+v && 
