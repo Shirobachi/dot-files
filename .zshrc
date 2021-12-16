@@ -50,7 +50,6 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help="cat $HOME/Scripts/my-scripts/help_message"
-alias history="history -E"
 
 function c() {
 	curl -s cheat.sh/$1
