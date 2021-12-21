@@ -82,7 +82,7 @@ while true; do
 	# Check if file /tmp/$SCRIPT_NAME.png not exists
 	if [ ! -f "/tmp/$SCRIPT_NAME.png" ]; then
 		# run sendToDiscord
-		sendToDiscord
+		# sendToDiscord
 	else
 		# check if not `which magick`
 		if [ ! $(which magick) ]; then
@@ -111,7 +111,7 @@ while true; do
 			same=true
 
 			# run sendToDiscord
-			sendToDiscord
+			# sendToDiscord
 		else
 			echo $par1 false >> /tmp/diffs
 			same=false
