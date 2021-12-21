@@ -106,7 +106,7 @@ while true; do
 		par3=$(echo $diff | cut -d' ' -f4)
 
 		# if diff is more than 0.1
-		if [ $(echo "$par1 > 7500" | bc) -eq 1 ]; then
+		if [ $(echo "$par2 > 0.11000" | bc) -eq 1 ]; then
 			echo $par1 true >> /tmp/diffs
 			same=true
 
