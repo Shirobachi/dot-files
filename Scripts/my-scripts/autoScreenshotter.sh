@@ -91,31 +91,37 @@ while true; do
 			
 			# Download macick from url
 			link="https://download.imagemagick.org/ImageMagick/download/binaries/magick"
+			notify-send "Downloading magick" "Please wait..."
 			wget "$link" -O "$path"/magick
+			notify-send "Downloading magick" "Done"
 			chmod +x "$path"/magick
 		fi
 
 		filename=$(echo $ssFilename | cut -d"/" -f6)
-		diff=$(magick compare -metric RMSE -subimage-search "$ssFilename" "/tmp/$SCRIPT_NAME.png" "$HOME/Downloads/$date/log/$filename" 2>&1 | cut -d' ' -f1)
-		# echo $diff >> /tmp/diffs
-		# echo .$diff. && sleep 1
+		# diff=$(magick compare -metric RMSE -subimage-search "$ssFilename" "/tmp/$SCRIPT_NAME.png" "$HOME/Downloads/$date/log/$filename" 2>&1 | cut -d' ' -f1)
+		diff=$(magick compare -metric RMSE -subimage-search "$ssFilename" "/tmp/$SCRIPT_NAME.png" "$HOME/Downloads/$date/log/$filename" 2>&1)
+
+		par1=$(echo $diff | cut -d' ' -f1)
+		par2=$(echo $diff | cut -d'(' -f2 | cut -d')' -f1)
+		par3=$(echo $diff | cut -d' ' -f4)
 
 		# if diff is more than 0.1
-		if [ $(echo "$diff > 7500" | bc) -eq 1 ]; then
-			echo $diff true >> /tmp/diffs
+		if [ $(echo "$par1 > 7500" | bc) -eq 1 ]; then
+			echo $par1 true >> /tmp/diffs
 			same=true
-			notify-send "true" "$diff"
+
 			# run sendToDiscord
 			sendToDiscord
 		else
-			echo $diff false >> /tmp/diffs
+			echo $par1 false >> /tmp/diffs
 			same=false
-			notify-send "false" "$diff"
+
 			# update screenshot
 			updateLastScreenshot
 		fi
 		
-		mv "$HOME/Downloads/$date/log/$filename" "$HOME/Downloads/$date/log/$filename.$same.$diff"
+		notify-send "$same" "$par1\n$par2\n$par3"
+		mv "$HOME/Downloads/$date/log/$filename" "$HOME/Downloads/$date/log/$filename:$same:$par1:$par2:$par3"
 	fi
 
 	# check if PID file not exists
