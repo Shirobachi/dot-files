@@ -2,6 +2,10 @@
 
 export network=`echo $(ip route | grep '^default' | awk '{print $5}' | head -n1)`
 export temperature=`for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $i"; done | tail -2 | head -1 | cut -d " " -f 4`
+
+# kill notification daemon
+killall -q dunst
+
 # polybar
 if killall polybar; sleep 1 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
 		# exit if parameter is set
