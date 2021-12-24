@@ -60,8 +60,3 @@ function CODE(){
 }
 
 fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
-
-
-
-
-
