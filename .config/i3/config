@@ -79,6 +79,9 @@ bindsym $mod+l exec "$HOME/Scripts/my-scripts/powerMenu.sh --lock"
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
 
+# make something sticky (visible on all workspaces)
+bindsym $mod+Shift+Ctrl+h scratchpad showbindsym $mod+Shift+Ctrl+space sticky toggle
+
 # Remap keys
 bindsym --release mod1+Shift+Left exec --no-startup-id "xdotool key --clearmodifiers Shift+Home && notify-send"
 bindsym --release mod1+Shift+Right exec --no-startup-id xdotool key --clearmodifiers Shift+End 
