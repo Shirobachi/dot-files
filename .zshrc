@@ -11,9 +11,6 @@ precmd() {
     vcs_info
 }
 
-# PATH
-export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:/home/simon/Apps:$PATH"
-
 # Enable substitution in the prompt.
 setopt prompt_subst
 
