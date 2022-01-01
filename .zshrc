@@ -10,6 +10,10 @@ zstyle ':vcs_info:git*' formats "%f(%F{cyan}%b%f)"
 precmd() {
     vcs_info
 }
+
+# PATH
+export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:/home/simon/Apps:$PATH"
+
 # Enable substitution in the prompt.
 setopt prompt_subst
 
@@ -19,6 +23,7 @@ function preexec() {
     typeset -gi CALCTIME=1
     typeset -gi CMDSTARTTIME=SECONDS
 }
+
 function precmd() {
     if (( CALCTIME )) ; then
         typeset -gi ETIME=SECONDS-CMDSTARTTIME
