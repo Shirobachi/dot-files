@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# if $3 is -x
+if [ "$3" == "-x" ]; then
+	echo $(curl -s "https://api.openweathermap.org/data/2.5/forecast?q=$1&appid=$2&units=metric") | jq
+	exit 0
+fi
+
 if [ $# -lt 2 ] || [ $# -gt 3 ] ; then
 	echo '-1'
 	# $1=Town name
