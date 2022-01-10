@@ -15,6 +15,7 @@ alias tb="nc termbin.com 9999"
 alias wifi="nmtui"
 alias config='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon'
 alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -a -m "Auto backup!"; /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull && /usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push'
+alias configSlave='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull --force'
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help="cat $HOME/Scripts/my-scripts/help_message"
