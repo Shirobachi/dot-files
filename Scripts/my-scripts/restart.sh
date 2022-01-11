@@ -5,11 +5,11 @@ export temperature=`for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(
 
 # set screen setup
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
-	xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-0"
+	xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-2"
+	notify-send "External monitor detected!"
 else
-
+	notify-send "No external monitor detected!"
 fi
-
 
 # kill notification daemon
 killall -q dunst
