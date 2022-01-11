@@ -8,6 +8,7 @@ if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
 	xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-2"
 	notify-send "External monitor detected!"
 else
+	xrandr | grep -i "Disconnected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --off
 	notify-send "No external monitor detected!"
 fi
 
@@ -15,7 +16,7 @@ fi
 killall -q dunst
 
 # polybar
-if killall polybar; sleep 1 && polybar -q asus -c ~/.config/polybar/config.ini && sleep .5 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
+if killall polybar; sleep 1 && polybar -q asus -c ~/.config/polybar/config.ini; sleep .5 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
 		# exit if parameter is set
 		if [ "$1" = "--exit" ]; then
 			exit
