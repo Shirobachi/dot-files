@@ -169,6 +169,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0; workspace $ws0
 
+# Move b/w outputs
+bindsym $mod+mod1+h move workspace to output right
+bindsym $mod+mod1+l move workspace to output left
+
+bindsym $mod+mod1+Left move container to output left
+bindsym $mod+mod1+Right move container to output right
+
 # Open specific applications in floating mode
 for_window [class="flameshot"] floating enable
 for_window [class="Gestures"] floating enable

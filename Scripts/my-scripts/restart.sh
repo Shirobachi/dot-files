@@ -7,7 +7,7 @@ export temperature=`for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(
 killall -q dunst
 
 # polybar
-if killall polybar; sleep 1 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
+if killall polybar; sleep 1 && polybar -q asus -c ~/.config/polybar/config.ini && sleep .5 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
 		# exit if parameter is set
 		if [ "$1" = "--exit" ]; then
 			exit
