@@ -3,6 +3,14 @@
 export network=`echo $(ip route | grep '^default' | awk '{print $5}' | head -n1)`
 export temperature=`for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $i"; done | tail -2 | head -1 | cut -d " " -f 4`
 
+# set screen setup
+if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
+	xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-0"
+else
+
+fi
+
+
 # kill notification daemon
 killall -q dunst
 
