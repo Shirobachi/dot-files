@@ -5,7 +5,7 @@ export temperature=`for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(
 
 # set screen setup
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
-	xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-2"
+	xrandr --output DP-0 --auto && xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-2"
 	notify-send "External monitor detected!"
 else
 	xrandr | grep -i "Disconnected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --off
