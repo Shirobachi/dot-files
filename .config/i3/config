@@ -145,6 +145,8 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
 
+bindsym $mod+a workspace $wsa
+
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
@@ -175,6 +177,9 @@ bindsym $mod+mod1+l move workspace to output left
 
 bindsym $mod+mod1+Left move container to output left
 bindsym $mod+mod1+Right move container to output right
+
+# Set workspaces to screen
+workspace 0 output DP-0
 
 # Open specific applications in floating mode
 for_window [class="flameshot"] floating enable
