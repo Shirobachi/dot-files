@@ -41,3 +41,5 @@ if libinput-gestures-setup restart; then
 else
     notify-send -u critical "libinput-gestures COUDN'T BE restarted"
 fi
+
+feh --randomize --bg-fill ~/Wallpapers/*
