@@ -27,6 +27,6 @@ if [ $window -eq 1 ]; then
 	# Go previous workspace
 	i3-msg workspace back_and_forth || notify-send "Error" "Error occupied!"
 else
-	flameshot full -c
+	flameshot screen -c
 fi
 
