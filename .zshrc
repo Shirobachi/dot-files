@@ -2,6 +2,9 @@ export ZSH="/home/simon/.oh-my-zsh"
 plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:$PATH:/home/simon/Apps/flutter/bin"
+
+
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
