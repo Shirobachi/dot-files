@@ -194,7 +194,8 @@ for_window [class="Deskreen"] floating enable
 for_window [class="Binding of Isaac: Afterbirth"] floating enable
 for_window [class="VirtScreen"] floating enable
 for_window [class="Crystal Launcher"] floating enable
-#for_window [class="Gnome-terminal"] floating enable
+for_window [class="sun-awt-X11-XFramePeer"] floating enable
+for_window [class="java-lang-Thread"] floating enable
 
 assign [class="Chromium"] $ws1
 
