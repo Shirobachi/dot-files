@@ -1,21 +1,6 @@
-call plug#begin('~/.vim/plugged')
-  Plug 'git@github.com:Valloric/YouCompleteMe.git'
-  Plug 'mbbill/undotree'
-  Plug 'vim-airline/vim-airline'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'morhetz/gruvbox'
-  Plug 'kien/ctrlp.vim'
-  Plug 'vim-scripts/RltvNmbr.vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'farmergreg/vim-lastplace'
-  Plug '907th/vim-auto-save'
-  Plug 'wakatime/vim-wakatime'
-  Plug 'tomasiser/vim-code-dark'
-call plug#end()
-
 syntax on
-set tabstop=2 softtabstop=2
-set shiftwidth=2 expandtab
+set tabstop=4 softtabstop=4
+set shiftwidth=4 expandtab
 set smartindent
 set number "relativenumber
 call RltvNmbr#RltvNmbrCtrl(1)
@@ -35,9 +20,6 @@ set clipboard=unnamedplus
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-colorscheme codedark
-let g:airline_theme = 'codedark'
 
 " toggle changes
 nnoremap <C-E> :UndotreeToggle<CR>:wincmd h<CR>
