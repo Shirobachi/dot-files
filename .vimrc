@@ -3,7 +3,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4 expandtab
 set smartindent
 set number "relativenumber
-call RltvNmbr#RltvNmbrCtrl(1)
+" call RltvNmbr#RltvNmbrCtrl(1)
 set nowrap
 set smartcase
 set noswapfile
