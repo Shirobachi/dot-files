@@ -1,6 +1,6 @@
 export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:$PATH:/home/simon/Apps/flutter/bin"
-export VISUAL=micro;
-export EDITOR=micro;
+export VISUAL=vim;
+export EDITOR=vim;
 
 alias mkdir='mkdir -pv'
 alias ll="ls -lAh"
