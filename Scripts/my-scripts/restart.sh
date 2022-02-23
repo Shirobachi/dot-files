@@ -9,9 +9,6 @@ xrandr | grep -i " connected" | cut -d " " -f1 | xargs -I{} xrandr --output {} -
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
 	xrandr --output DP-0 --auto && xrandr --output "DP-2" --auto --output "DP-0" --left-of "DP-2"
 	#xrandr --output DP-0 --pos 0x0 --rotate left --output DP-2 --pos 1080x560
-	notify-send "External monitor detected!"
-else
-	notify-send "No external monitor detected!"
 fi
 
 # kill notification daemon
