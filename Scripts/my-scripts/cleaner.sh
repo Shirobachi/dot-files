@@ -31,6 +31,10 @@ if [ "$3" -lt 1 ] || [ "$3" -gt 365 ]; then
 	exit 1
 fi
 
+if [ "$1" = "delete" ]; then
+    find /home/simon -type d -empty -delete
+fi
+
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 # Go to the folder
