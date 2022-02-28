@@ -28,3 +28,7 @@ function c() {
 function CODE(){
   code $1 && q
 }
+
+function hot(){
+    ls "$2" | entr "$1" "$2"
+}
