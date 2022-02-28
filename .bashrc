@@ -12,4 +12,4 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
     fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
 fi
 
-source $HOME/.aliases
+source /home/simon/.aliases
