@@ -21,6 +21,9 @@ alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help="cat $HOME/Scripts/my-scripts/help_message"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 function c() {
 	curl -s cheat.sh/$1
 }
