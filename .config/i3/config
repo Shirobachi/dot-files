@@ -174,9 +174,13 @@ bindsym $mod+Shift+0 move container to workspace $ws0; workspace $ws0
 # Move b/w outputs
 bindsym $mod+mod1+h move workspace to output right
 bindsym $mod+mod1+l move workspace to output left
+bindsym $mod+mod1+j move workspace to output down
+bindsym $mod+mod1+k move workspace to output up
 
 bindsym $mod+mod1+Left move container to output left
 bindsym $mod+mod1+Right move container to output right
+bindsym $mod+mod1+Down move container to output down
+bindsym $mod+mod1+Up move container to output up
 
 # Set workspaces to screen
 workspace 0 output DP-0
