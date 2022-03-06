@@ -8,7 +8,7 @@ xrandr | grep -i "Disconnected" | cut -d " " -f1 | xargs -I{} xrandr --output {}
 xrandr | grep -i " connected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --auto
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
 	# xrandr --output DP-0 --auto && 
-	xrandr --output "DP-0" --rotate inverted --auto --above "DP-2"
+	xrandr --output "DP-0" --auto --above "DP-2"
 	#xrandr --output DP-0 --pos 0x0 --rotate left --output DP-2 --pos 1080x560
 fi
 
