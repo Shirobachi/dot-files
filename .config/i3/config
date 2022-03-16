@@ -41,6 +41,7 @@ exec copyq
 exec blueman-tray
 exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1; $HOME/Scripts/my-scripts/powerMenu.sh -rl 
 exec play-with-mpv
+exec syncthing
 
 exec ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
