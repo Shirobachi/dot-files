@@ -36,57 +36,40 @@ exec notify-send -t 0 "Last login information" "$(last reboot | head -2 | tail -
 exec nm-applet # sth with system notifications
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec --no-startup-id dunst
-
-exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
+exec LC_TIME=en_US.UTF-8
+exec numlockx on
 exec xcompmgr
 
+exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
+
+exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
 
-exec ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
-
-# Change time/date language
-exec LC_TIME=en_US.UTF-8
-
-
-# Keep numlock on
-bindsym --release Num_Lock exec numlockx on 
-exec numlockx on
+#exec --no-startup-id ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
 # Key binds
 bindsym $mod+d exec /home/simon/.config/polybar/scripts/launcher.sh 
 bindsym $mod+c exec /home/simon/.config/polybar/scripts/color-switch.sh
-bindsym $mod+Shift+d exec rofi -show ssh
+bindsym $mod+Shift+d exec rofi -show ssh -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi
 bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
-bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
-
 bindsym $mod+Shift+equal exec $HOME/Scripts/my-scripts/sendToNotion.sh
 bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh
 bindsym $mod+v exec copyq show
-
 bindsym Shift+Ctrl+space exec flameshot gui 
-bindsym Print exec /home/simon/Scripts/my-scripts/screenshot-maker.sh
-bindsym $mod+F3 exec gnome-terminal -e "ranger"
 bindsym $mod+Shift+F3 exec xdg-open ~
+bindsym $mod+Return exec gnome-terminal -e zsh || gnome-terminal 
+bindsym $mod+Shift+Ctrl+s exec "/home/simon/.config/polybar/scripts/powermenu.sh"
 
-bindsym $mod+Return exec gnome-terminal -e zsh 
-bindsym $mod+Shift+Return exec gnome-terminal 
 bindsym $mod+Shift+q kill
-
+bindsym --release Num_Lock exec numlockx on #numlock always on 
 bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
-bindsym $mod+r mode "resize"
-bindsym $mod+minus exec i3lock-fancy -p
-
-bindsym $mod+Shift+Ctrl+s exec "$HOME/Scripts/my-scripts/powerMenu.sh --poweroff"
-bindsym $mod+Shift+Ctrl+r exec "$HOME/Scripts/my-scripts/powerMenu.sh --restart"
-bindsym $mod+Shift+Ctrl+e exec "$HOME/Scripts/my-scripts/powerMenu.sh --exit"
-bindsym $mod+l exec "$HOME/Scripts/my-scripts/powerMenu.sh --lock"
-
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
+bindsym $mod+r mode "resize"
+bindsym $mod+Shift+Ctrl+space sticky toggle # make something sticky (visible on all workspaces)
 
-# make something sticky (visible on all workspaces)
-bindsym $mod+Shift+Ctrl+space sticky toggle
+#bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
 # Remap keys
 bindsym --release mod1+Shift+Left exec --no-startup-id "xdotool key --clearmodifiers Shift+Home && sleep 1.5 && xdotool keyup alt"
@@ -94,13 +77,13 @@ bindsym --release mod1+Shift+Right exec --no-startup-id "xdotool key --clearmodi
 bindsym --release mod1+Left exec --no-startup-id "xdotool key --clearmodifiers Home && sleep 1.5 && xdotool keyup alt"
 bindsym --release mod1+Right exec --no-startup-id "xdotool key --clearmodifiers End && sleep 1.5 && xdotool keyup alt"
 
-# You can use the cursor keys:
+# Change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# You can use the cursor keys:
+# Move window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -149,8 +132,6 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
 
-bindsym $mod+a workspace $wsa
-
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
@@ -187,7 +168,7 @@ bindsym $mod+mod1+Down move container to output down
 bindsym $mod+mod1+Up move container to output up
 
 # Set workspaces to screen
-workspace 0 output DP-0
+##workspace 0 output DP-0
 
 # Open specific applications in floating mode
 for_window [class="flameshot"] floating enable
@@ -206,7 +187,7 @@ for_window [class="sun-awt-X11-XFramePeer"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 for_window [class="Display-im6.q16"] floating enable
 
-assign [class="Chromium"] $ws1
+##assign [class="Chromium"] $ws1
 
 # Make moveable my mouse
 floating_modifier $mod
