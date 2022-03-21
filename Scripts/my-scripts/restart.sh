@@ -17,15 +17,7 @@ killall -q dunst
 
 sleep 1
 # polybar
-if killall polybar; sleep 1 && polybar -q asus -c ~/.config/polybar/config.ini; sleep .5 && polybar -q main -c ~/.config/polybar/config.ini || [ "$1" = "--exit" ]; then
-		# exit if parameter is set
-		if [ "$1" = "--exit" ]; then
-			exit
-		fi
-    notify-send 'polybar restarted'
-else
-    notify-send -u critical "polybar COUDN'T BE restarted"
-fi
+/home/simon/.config/polybar/launch.sh
 
 # i3
 if i3-msg restart; then

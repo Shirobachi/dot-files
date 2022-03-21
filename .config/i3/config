@@ -25,23 +25,23 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Auto run
 exec --no-startup-id libinput-gestures-setup start
-exec nm-applet
-exec --no-startup-id dunst
-exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
-exec xcompmgr
+exec copyq
+exec blueman-tray
+exec gromit-mpx -k "F3" -u "F4"
+exec syncthing
 exec sleep 15 && kdeconnect-indicator
 exec notify-send -t 0 "Last login information" "$(last reboot | head -2 | tail -1 | cut -d\. -f 3 | cut -d " " -f 2,3,4,5,6,7,8,9)"
-#exec touchpad-indicator
-exec gromit-mpx -k "F3" -u "F4"
+
+## System things 
+exec nm-applet # sth with system notifications
+exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
+exec --no-startup-id dunst
+
+exec sleep 10 && /home/simon/Scripts/my-scripts/restart.sh
+exec xcompmgr
 
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
 exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
-exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
-exec copyq
-exec blueman-tray
-exec feh --randomize --bg-fill ~/Wallpapers/* && i3lock-fancy -p; sleep 1; $HOME/Scripts/my-scripts/powerMenu.sh -rl 
-exec play-with-mpv
-exec syncthing
 
 exec ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
@@ -54,7 +54,8 @@ bindsym --release Num_Lock exec numlockx on
 exec numlockx on
 
 # Key binds
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+d exec /home/simon/.config/polybar/scripts/launcher.sh 
+bindsym $mod+c exec /home/simon/.config/polybar/scripts/color-switch.sh
 bindsym $mod+Shift+d exec rofi -show ssh
 bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
 bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
