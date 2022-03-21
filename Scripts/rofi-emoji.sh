@@ -72,7 +72,7 @@ function download() {
 }
 
 function rofi_menu() { # {{{
-	rofi -width 50 -lines 15 -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi -dmenu -i -p 'emoji: ' \
+	rofi -width 50 -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi -lines 15 -dmenu -i -p 'emoji: ' \
 		-kb-row-tab '' \
 		-kb-row-select Tab \
 		-kb-custom-1 Ctrl+c
