@@ -49,8 +49,9 @@ exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
 #exec --no-startup-id ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
 # Key binds
-bindsym $mod+d exec /home/simon/.config/polybar/scripts/launcher.sh 
+bindsym $mod+d exec rofi -show run -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi
 bindsym $mod+c exec /home/simon/.config/polybar/scripts/color-switch.sh
+bindsym $mod+shift+c exec /home/simon/.config/polybar/scripts/style-switch.sh
 bindsym $mod+Shift+d exec rofi -show ssh -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi
 bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
 bindsym $mod+Shift+equal exec $HOME/Scripts/my-scripts/sendToNotion.sh
