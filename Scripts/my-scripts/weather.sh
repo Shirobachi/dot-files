@@ -17,7 +17,7 @@ elif [ $# -eq 2 ]; then
 	if [[ $? -eq 0 ]]; then
 		temp=`echo $respond | jq '.list[0].main.temp'`
 		desc=`echo $respond | jq '.list[0].weather[0].main'`; desc=${desc::-1}; desc=${desc:1}
-		echo "摒 temp°C"
+		echo "摒 $temp°C"
 	else
 		echo "-1"
 	fi
