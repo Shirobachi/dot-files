@@ -34,5 +34,5 @@ function CODE(){
 }
 
 function hot(){
-    ls "$2" | entr "$1" "$2"
+    ls "$2" | entr "$1" "$2" "$3"
 }
