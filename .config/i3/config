@@ -68,7 +68,9 @@ bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
 bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
 bindsym $mod+r mode "resize"
-bindsym $mod+Shift+Ctrl+space sticky toggle # make something sticky (visible on all workspaces)
+
+# make something sticky (visible on all workspaces)
+bindsym $mod+Shift+Ctrl+space sticky toggle
 
 #bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
