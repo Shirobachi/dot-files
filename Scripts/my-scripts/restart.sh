@@ -11,7 +11,7 @@ fi
 
 # restart services and new wallpaper
 feh --randomize --bg-fill ~/Wallpapers/*
-/home/simon/.config/polybar/launch.sh
+sleep 3 && /home/simon/.config/polybar/launch.sh
 i3-msg restart
 libinput-gestures-setup restart
 
