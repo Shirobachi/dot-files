@@ -189,6 +189,7 @@ for_window [class="Crystal Launcher"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 for_window [class="Display-im6.q16"] floating enable
+for_window [class="Tk"] floating enable
 
 ##assign [class="Chromium"] $ws1
 
