@@ -44,7 +44,6 @@ exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
 
 exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
-exec xautolock -time 5 -locker '$HOME/Scripts/my-scripts/locker.sh' &
 
 #exec --no-startup-id ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
