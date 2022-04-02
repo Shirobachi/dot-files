@@ -1,5 +1,5 @@
 # i3 config file (v4)
-#
+
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
@@ -74,10 +74,10 @@ bindsym $mod+Shift+Ctrl+space sticky toggle
 #bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
 # Remap keys
-bindsym --release mod1+Shift+Left exec --no-startup-id "xdotool key --clearmodifiers Shift+Home && sleep 1.5 && xdotool keyup alt"
-bindsym --release mod1+Shift+Right exec --no-startup-id "xdotool key --clearmodifiers Shift+End && sleep 1.5 && xdotool keyup alt"
-bindsym --release mod1+Left exec --no-startup-id "xdotool key --clearmodifiers Home && sleep 1.5 && xdotool keyup alt"
-bindsym --release mod1+Right exec --no-startup-id "xdotool key --clearmodifiers End && sleep 1.5 && xdotool keyup alt"
+bindsym --release mod1+Shift+Left exec --no-startup-id "xdotool key --clearmodifiers Shift+Home && sleep 1 && xdotool keyup alt"
+bindsym --release mod1+Shift+Right exec --no-startup-id "xdotool key --clearmodifiers Shift+End && sleep 1 && xdotool keyup alt"
+bindsym --release mod1+Left exec --no-startup-id "xdotool key --clearmodifiers Home && sleep 1 && xdotool keyup alt"
+bindsym --release mod1+Right exec --no-startup-id "xdotool key --clearmodifiers End && sleep 1 && xdotool keyup alt"
 
 # Change focus
 bindsym $mod+Left focus left
