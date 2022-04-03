@@ -40,7 +40,7 @@ exec LC_TIME=en_US.UTF-8
 exec numlockx on
 exec xcompmgr
 
-exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
+#exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
 
 exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
