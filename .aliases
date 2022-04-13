@@ -1,4 +1,6 @@
-export PATH="$HOME/.config/composer/vendor/bin:/home/simon/.cargo/bin:$PATH:/home/simon/Apps/flutter/bin"
+#!/bin/bash
+
+export PATH="$PATH:/home/simon/Apps/bin"
 export VISUAL=vim;
 export EDITOR=vim;
 
@@ -20,13 +22,11 @@ alias configMaster='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/s
 alias configSlave='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull --force'
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
-alias help="cat $HOME/Scripts/my-scripts/help_message"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+alias help='cat $HOME/Scripts/my-scripts/help_message'
 
 function c() {
-	curl -s cheat.sh/$1
+	# curl with all parameters
+	curl -s cheat.sh/"$*"
 }
 
 function CODE(){
@@ -36,3 +36,9 @@ function CODE(){
 function hot(){
     ls "$2" | entr "$1" "$2" "$3"
 }
+
+# if file called .bash_no_backup exists, run this
+if [ -f "$HOME/.bash_no_backup" ]; then
+		# shellcheck source=/dev/null
+		source "$HOME/.bash_no_backup"
+fi

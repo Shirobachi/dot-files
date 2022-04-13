@@ -12,8 +12,7 @@ menu=(
 	"(Un)mount USB"
 	"(Un)moung SSH"
 	"Password generator"
-	"Change wallpaper"
-	"Random cool wallpaper"
+	"Change external screen position"
 )
 
 # Save input from rofi
@@ -36,7 +35,7 @@ elif [[ $input == "${menu[3]}" ]]; then
 	bash $SCRIPT_DIR/password_generator.sh
 elif [[ $input == "${menu[4]}" ]]; then
 	# run script
-	bash $SCRIPT_DIR/wallpaper_changer.sh
+	bash $SCRIPT_DIR/change_screen_possition.sh
 elif [[ $input == "${menu[5]}" ]]; then
 	# run random wallpaper
 	feh --randomize --bg-fill ~/Wallpapers/wallpapers

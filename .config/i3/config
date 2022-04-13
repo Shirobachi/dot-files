@@ -22,6 +22,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
+bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
 
 # Auto run
 exec --no-startup-id libinput-gestures-setup start
@@ -29,7 +31,6 @@ exec copyq
 exec blueman-tray
 exec gromit-mpx -k "F3" -u "F4"
 exec syncthing
-exec sleep 15 && kdeconnect-indicator
 exec notify-send -t 0 "Last login information" "$(last reboot | head -2 | tail -1 | cut -d\. -f 3 | cut -d " " -f 2,3,4,5,6,7,8,9)"
 
 ## System things 
@@ -40,12 +41,10 @@ exec LC_TIME=en_US.UTF-8
 exec numlockx on
 exec xcompmgr
 
-#exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
+exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
 
 exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
-
-#exec --no-startup-id ll /home/simon/Desktop/incomplited && transmission-gtk # run transmision if something still downloading
 
 # Key binds
 bindsym $mod+d exec rofi -show run -theme $HOME/.config/polybar/scripts/rofi/launcher.rasi
@@ -60,18 +59,15 @@ bindsym Shift+Ctrl+space exec flameshot gui
 bindsym $mod+Shift+F3 exec xdg-open ~
 bindsym $mod+Return exec gnome-terminal -e zsh || gnome-terminal 
 bindsym $mod+Shift+Ctrl+s exec "/home/simon/.config/polybar/scripts/powermenu.sh"
+bindsym Print exec flameshot screen -c
+bindsym $mod+l exec i3lock-fancy -p
 
 bindsym $mod+Shift+q kill
 bindsym --release Num_Lock exec numlockx on #numlock always on 
 bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
-bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
-bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
-bindsym $mod+r mode "resize"
 
 # make something sticky (visible on all workspaces)
 bindsym $mod+Shift+Ctrl+space sticky toggle
-
-#bindsym $mod+Shift+z exec ~/Scripts/my-scripts/xcompmgrSwitcher.sh
 
 # Remap keys
 bindsym --release mod1+Shift+Left exec --no-startup-id "xdotool key --clearmodifiers Shift+Home && sleep 1 && xdotool keyup alt"
@@ -122,6 +118,9 @@ set $ws8 8
 set $ws9 9
 set $ws0 0
 
+# Assign workspace 0th to external screen
+workspace 0 output DP-0
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -169,9 +168,6 @@ bindsym $mod+mod1+Right move container to output right
 bindsym $mod+mod1+Down move container to output down
 bindsym $mod+mod1+Up move container to output up
 
-# Set workspaces to screen
-##workspace 0 output DP-0
-
 # Open specific applications in floating mode
 for_window [class="flameshot"] floating enable
 for_window [class="Gestures"] floating enable
@@ -189,26 +185,7 @@ for_window [class="sun-awt-X11-XFramePeer"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 for_window [class="Display-im6.q16"] floating enable
 for_window [class="Tk"] floating enable
-
-##assign [class="Chromium"] $ws1
+for_window [class="Blueman-manager"] floating enable
 
 # Make moveable my mouse
 floating_modifier $mod
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        bindsym h resize shrink width 1 px
-        bindsym j resize grow height 1 px
-        bindsym k resize shrink height 1 px
-        bindsym l resize grow width 1 px
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
