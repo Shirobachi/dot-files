@@ -27,7 +27,7 @@ bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l 
 
 # Auto run
 exec --no-startup-id libinput-gestures-setup start
-exec copyq
+exec sleep 60 && copyq
 exec blueman-tray
 exec gromit-mpx -k "F3" -u "F4"
 exec syncthing
