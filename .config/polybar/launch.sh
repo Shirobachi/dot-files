@@ -12,7 +12,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
 if type "xrandr"; then
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1 | tac); do
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1 | cat); do
     MONITOR=$m polybar -c "$DIR/config.ini" --reload main &
   done
 else
