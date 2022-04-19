@@ -7,3 +7,5 @@
 	autocrlf = input
 [http]
 	postBuffer = 524288000
+[alias]
+	pushall = !git remote | xargs -L1 git push --all
