@@ -6,13 +6,13 @@ function saveLayout() {
 	export DISPLAY=:0
 	notify-send "Saving layout ..."
 
+    # Try to turn off LEDS
+    curl -s http://wled.local/win&T=0;
+
 	# Send config changes to GH
 	/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon commit -am "Auto backup!"
 	/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon pull
 	/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/simon push
-
-    # Try to turn off LEDS
-    curl -s http://wled.local/win&T=0
 
 	# Remove old layout
 	rm -rf "$HOME/.i3" "$HOME/.config/i3-resurrect"
