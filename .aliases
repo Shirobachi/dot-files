@@ -23,6 +23,7 @@ alias configSlave='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/si
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help='cat $HOME/Scripts/my-scripts/help_message'
+alias gong='mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav'
 
 function c() {
 	# curl with all parameters
