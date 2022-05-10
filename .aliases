@@ -23,7 +23,7 @@ alias configSlave='/usr/bin/git --git-dir=/home/simon/.cfg/ --work-tree=/home/si
 alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help='cat $HOME/Scripts/my-scripts/help_message'
-alias gong='mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav'
+alias gong='playerctl pause && mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav --volume=150 && playerctl play'
 
 function c() {
 	# curl with all parameters
@@ -51,6 +51,10 @@ function b(){
 	python /tmp/b.py "$@"
 
 	cd - || exit
+}
+
+function alarm(){
+	termdown "$1" && gong && termdown
 }
 
 # if file called .bash_no_backup exists, run this
