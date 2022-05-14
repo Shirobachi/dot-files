@@ -40,15 +40,15 @@ function hot(){
 
 function b(){
 	# check if file /tmp/b.py not exist
-	if [ ! -f /tmp/b.py ]; then
+	if [ ! -f "/tmp/b.py" ]; then
 		# if not exist, download from 'https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py'
-		curl -s https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py -o /tmp/b.py
+		curl -s https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py -o "/tmp/b.py"
 	fi
 
 	cd "$HOME/.Downloads" || exit
 
 	# run python script
-	python /tmp/b.py "$@"
+	python "/tmp/b.py" "$@"
 
 	cd - || exit
 }
