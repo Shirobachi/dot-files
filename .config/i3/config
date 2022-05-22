@@ -44,7 +44,7 @@ exec xcompmgr
 
 exec $HOME/Scripts/my-scripts/restart.sh && i3lock-fancy -g;
 
-exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
+#exec /home/simon/Scripts/my-scripts/sessionManager.sh -r
 exec --no-startup-id /home/simon/Scripts/i3-alternating-layout/alternating_layouts.py
 
 # Key binds
