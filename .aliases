@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export PATH="$PATH:/home/simon/Apps/bin"
 export VISUAL=vim;
 export EDITOR=vim;
@@ -24,6 +23,8 @@ alias watch="watch -n.1"
 alias xclipp="xclip -selection clipboard"
 alias help='cat $HOME/Scripts/my-scripts/help_message'
 alias gong='playerctl pause && mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav --volume=150 && playerctl play'
+alias nyan='curl https://poptart.spinda.net'
+alias B='curl -s https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py > /tmp/budget.py && python /tmp/budget.py'
 
 function c() {
 	# curl with all parameters
@@ -56,6 +57,11 @@ function b(){
 function alarm(){
 	termdown "$1" && gong && termdown
 }
+
+if [ -x /usr/games/cowsay ]; then
+    #fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
+fi
+curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | bash
 
 # if file called .bash_no_backup exists, run this
 if [ -f "$HOME/.bash_no_backup" ]; then

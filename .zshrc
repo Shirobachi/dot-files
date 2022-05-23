@@ -33,10 +33,6 @@ RPROMPT='%(?.%F{cyan}Took ${ETIME}s.%F{red}Retuned: %?)${vcs_info_msg_0_} %F{mag
 
 export LANG=en_US.UTF-8
 
-if [ -x /usr/games/cowsay ]; then
-    fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
-fi
-
 source /home/simon/.aliases
 alias history="omz_history -f"
 
