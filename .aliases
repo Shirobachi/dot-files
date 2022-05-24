@@ -59,6 +59,7 @@ function alarm(){
 }
 
 if [ -x /usr/games/cowsay ]; then
+    true
     #fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
 fi
 curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | bash
