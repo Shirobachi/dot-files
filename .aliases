@@ -24,7 +24,7 @@ alias xclipp="xclip -selection clipboard"
 alias help='cat $HOME/Scripts/my-scripts/help_message'
 alias gong='playerctl pause && mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav --volume=150 && playerctl play'
 alias nyan='curl https://poptart.spinda.net'
-alias b='run_remote_file python3 https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py 7b78d724a6b4313fb587655aa96f729d'
+alias b='cd ~/.Downloads; run_remote_file python3 https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/budget.py 06a74c8261eba81d8fd1c363e738d938; cd -'
 
 function c() {
 	# curl with all parameters
