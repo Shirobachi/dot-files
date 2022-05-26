@@ -24,7 +24,7 @@ alias xclipp="xclip -selection clipboard"
 alias help='cat $HOME/Scripts/my-scripts/help_message'
 alias gong='playerctl pause && mpv https://bigsoundbank.com/UPLOAD/wav/1483.wav --volume=150 && playerctl play'
 alias nyan='curl https://poptart.spinda.net'
-alias B='curl -s https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py > /tmp/budget.py && python /tmp/budget.py'
+alias b='run_remote_file python3 https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py 7b78d724a6b4313fb587655aa96f729d'
 
 function c() {
 	# curl with all parameters
@@ -39,30 +39,37 @@ function hot(){
     ls "$2" | entr "$1" "$2" "$3"
 }
 
-function b(){
-	# check if file /tmp/b.py not exist
-	if [ ! -f "/tmp/b.py" ]; then
-		# if not exist, download from 'https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py'
-		curl -s https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/b3f056890f6ef3df9056441c32122ae9bfff151f/budget.py -o "/tmp/b.py"
-	fi
-
-	cd "$HOME/.Downloads" || exit
-
-	# run python script
-	python "/tmp/b.py" "$@"
-
-	cd - || exit
-}
-
 function alarm(){
 	termdown "$1" && gong && termdown
+}
+
+function run_remote_file(){
+	if [ -f '/tmp/remote_file' ]; then
+		rm '/tmp/remote_file'
+	fi
+	echo "Downloading remote file..."
+	curl -s "$2" -o /tmp/remote_file &&
+
+	hash=$(md5sum /tmp/remote_file) &&
+	hash=$(echo "$hash" | cut -d ' ' -f 1) &&
+	if [ "$hash" != "$3" ]; then
+		echo "File change detected! New hash: $hash"
+		return
+	else
+		clear
+		$1 /tmp/remote_file
+	fi
+
+	if [ -f '/tmp/remote_file' ]; then
+		rm '/tmp/remote_file'
+	fi
 }
 
 if [ -x /usr/games/cowsay ]; then
     true
     #fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
 fi
-curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | bash
+run_remote_file bash "https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch" "44c0e0937603e507dfb6b057ef47fdda"
 
 # if file called .bash_no_backup exists, run this
 if [ -f "$HOME/.bash_no_backup" ]; then
