@@ -17,7 +17,7 @@ xrandr | cut -d " " -f1 | xargs -I{} xrandr --output {} --off
 xrandr | grep -i " connected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --auto
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
 	xrandr --output "DP-0" --auto --$possition "DP-2"
-  xrandr --output "DP-0" --mode 1440x900
+  #xrandr --output "DP-0" --mode 1440x900
 fi
 
 # restart services and new wallpaper
