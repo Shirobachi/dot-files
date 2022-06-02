@@ -48,7 +48,7 @@ function run_remote_file(){
 		rm '/tmp/remote_file'
 	fi
 	echo "Downloading remote file..."
-	curl --connect-timeout 1 -max-time 1 -s "$2" -o /tmp/remote_file || {clear && fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`} &&
+	curl --connect-timeout 1 -max-time 1 -s "$2" -o /tmp/remote_file || {clear && fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1` ;} &&
 
 	hash=$(md5sum /tmp/remote_file 2>/dev/null) || return &&
 	hash=$(echo "$hash" | cut -d ' ' -f 1) &&
