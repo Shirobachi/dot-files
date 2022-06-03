@@ -187,6 +187,7 @@ for_window [class="java-lang-Thread"] floating enable
 for_window [class="Display-im6.q16"] floating enable
 for_window [class="Tk"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="Arandr"] floating enable
 
 # Make moveable my mouse
 floating_modifier $mod

@@ -14,9 +14,9 @@ fi
 
 # set screen setup
 xrandr | cut -d " " -f1 | xargs -I{} xrandr --output {} --off
-xrandr | grep -i " connected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --auto
+xrandr | grep -i " connected" | cut -d " " -f1 | xargs -I{} xrandr --output {} --auto --dpi 96
 if [ $(xrandr | grep " connected" | wc -l) -gt 1 ]; then
-	xrandr --output "DP-0" --auto --$possition "DP-2"
+	xrandr --output "DP-0" --auto --$possition "DP-2" --dpi 96
   #xrandr --output "DP-0" --mode 1440x900
 fi
 
