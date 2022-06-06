@@ -43,12 +43,24 @@ function alarm(){
 	termdown "$1" && gong && termdown
 }
 
+# $1 - running command
+# $2 - url
+# #3 - hash
+# $4 - timeout (oprional)
 function run_remote_file(){
 	if [ -f '/tmp/remote_file' ]; then
 		rm '/tmp/remote_file'
 	fi
+
+	# set $4 to default value if not set
+	if [ -z "$4" ]; then
+		timeout=300
+	else
+		timeout=$4
+	fi
 	echo "Downloading remote file..."
-	curl -L --connect-timeout 1 --max-time 1 -s "$2" -o /tmp/remote_file || {clear && fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1` ;} &&
+	curl -L --max-time "$timeout" -s "$2" -o /tmp/remote_file || { echo "Download failed" && return 1; }
+
 
 	hash=$(md5sum /tmp/remote_file 2>/dev/null) || return &&
 	hash=$(echo "$hash" | cut -d ' ' -f 1) &&
@@ -69,7 +81,7 @@ if [ -x /usr/games/cowsay ]; then
     true
     #fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1`
 fi
-run_remote_file bash "https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch" "44c0e0937603e507dfb6b057ef47fdda"
+{ run_remote_file bash "https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch" "44c0e0937603e507dfb6b057ef47fdda" 1; }  || { clear && fortune | cowsay -f "$(ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1)" ;} &&
 
 # if file called .bash_no_backup exists, run this
 if [ -f "$HOME/.bash_no_backup" ]; then
