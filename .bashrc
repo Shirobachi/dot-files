@@ -1,3 +1,4 @@
+#!/bin/bash
 # Simon Hryszko @2021
 
 shopt -s expand_aliases
