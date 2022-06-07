@@ -76,7 +76,7 @@ function run_remote_file(){
 	fi
 }
 
-run_remote_file bash "https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch" "44c0e0937603e507dfb6b057ef47fdda" 1  || { clear && fortune | cowsay -f "$(ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1)" ;} 
+#run_remote_file bash "https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch" "44c0e0937603e507dfb6b057ef47fdda" 1  || { clear && fortune | cowsay -f "$(ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1)" ;} 
 
 # if file called .bash_no_backup exists, run this
 if [ -f "$HOME/.bash_no_backup" ]; then
