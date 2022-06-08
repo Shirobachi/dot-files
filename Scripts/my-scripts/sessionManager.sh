@@ -17,7 +17,10 @@ function saveLayout() {
 	# Remove old layout
 	rm -rf "$HOME/.i3" "$HOME/.config/i3-resurrect"
 
-	# for 0..9
+  # Send work TS
+  cd /home/simon/Documents/magently/toggl2redmine/ && sh toggl.sh  >> /home/simon/Documents/magently/toggl2redmine/toggl2redmine.log
+	
+  # for 0..9
 	for i in {0..9}; do
 		# save layout
 		i3-resurrect save -w $i -d "$HOME/.i3"

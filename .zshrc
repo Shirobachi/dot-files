@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export ZSH="/home/simon/.oh-my-zsh"
 plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
