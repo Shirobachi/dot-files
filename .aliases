@@ -83,4 +83,4 @@ if [ -f "$HOME/.bash_no_backup" ]; then
 		source "$HOME/.bash_no_backup"
 fi
 
-neofetch
+#neofetch
