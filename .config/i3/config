@@ -169,6 +169,10 @@ bindsym $mod+mod1+Right move container to output right
 bindsym $mod+mod1+Down move container to output down
 bindsym $mod+mod1+Up move container to output up
 
+# Change focus output
+bindsym $mod+mod1+Ctrl+Right focus output right
+bindsym $mod+mod1+Ctrl+Left focus output left
+
 # Open specific applications in floating mode
 for_window [class="flameshot"] floating enable
 for_window [class="Gestures"] floating enable
