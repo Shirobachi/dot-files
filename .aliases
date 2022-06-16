@@ -27,7 +27,43 @@ alias nyan='curl https://poptart.spinda.net'
 alias b='cd ~/.Downloads; run_remote_file python3 https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/budget.py 06a74c8261eba81d8fd1c363e738d938; cd -'
 alias cm='cd ~/Documents/magently/'
 alias cmr='cm && r'
-alias mpush='git add . && git commit --amend --no-edit && git push origin HEAD:refs/for/master'
+
+function mpush(){
+    VPN="chop-chop"
+
+    # Try to connect to the VPN
+    VPN_ID=$(nmcli con | grep "$VPN" | awk '{print $2}')
+    echo "Connecting to VPN: $VPN"
+    nmcli con up "$VPN_ID"
+
+    # Check if last command was successful
+    if [ $? -eq 0 ]; then
+        # Add the files to the repo
+        echo "Pushing to magently"
+        git add .
+
+        # Commit ammend the last commit no edit
+        echo "Committing..."
+        git commit --amend --no-edit
+
+        # Push to the repo
+        echo "Pushing..."
+        git push origin HEAD:refs/for/master
+
+        # Disconnect from the VPN
+        VPN_ID=$(nmcli con | grep "$VPN" | awk '{print $2}')
+        echo "Disconnecting from VPN: $VPN"
+        nmcli con down "$VPN_ID"
+        echo "Done!"
+    else
+        echo "Could not connect to VPN: $VPN"
+        echo "DEBUG:"
+        echo "VPN_ID: $VPN_ID"
+        echo "VPN_STATUS: $(nmcli con | grep "$VPN" | awk '{print $3}')"
+        echo "VPN_CONNECTED: $(nmcli con | grep "$VPN" | awk '{print $3}')"
+        echo "VPN_LIST: $(nmcli con)"
+    fi
+}
 
 function c() {
 	# curl with all parameters
@@ -35,7 +71,7 @@ function c() {
 }
 
 function CODE(){
-  code $1 && q
+    code $1 && q
 }
 
 function hot(){
