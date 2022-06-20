@@ -27,6 +27,8 @@ alias nyan='curl https://poptart.spinda.net'
 alias b='cd ~/.Downloads; run_remote_file python3 https://gist.githubusercontent.com/Shirobachi/293c92aaa24dd57068c6e5775ee23cb0/raw/budget.py 06a74c8261eba81d8fd1c363e738d938; cd -'
 alias cm='cd ~/Documents/magently/'
 alias cmr='cm && r'
+alias lock='sudo umount ~/Documents'
+alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(sudo cat ~root/.ecryptfs/sig-cache.txt)'
 
 function mpush(){
     VPN="chop-chop"
