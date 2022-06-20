@@ -2,6 +2,7 @@
 export PATH="$PATH:/home/simon/Apps/bin"
 export VISUAL=vim;
 export EDITOR=vim;
+export MAGENTO_PATH="/home/simon/Documents/magently/training/mde/"
 
 alias mkdir='mkdir -pv'
 alias ll="ls -lAh"
@@ -28,7 +29,23 @@ alias b='cd ~/.Downloads; run_remote_file python3 https://gist.githubusercontent
 alias cm='cd ~/Documents/magently/'
 alias cmr='cm && r'
 alias lock='sudo umount ~/Documents'
-alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(sudo cat ~root/.ecryptfs/sig-cache.txt)'
+alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
+
+function mag(){
+    cd $MAGENTO_PATH
+
+    # If $1 = compile
+    if [ "$1" = "compile" ]; then
+        docker-compose exec app bash -c "bin/magento setup:di:compile" && notify-send "Magento compiled!"
+    fi
+
+    # if $2 is set, exit
+    if [ "$2" ]; then
+        exit 0
+    else
+        cd -
+    fi
+}
 
 function mpush(){
     VPN="chop-chop"
