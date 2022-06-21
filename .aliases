@@ -36,15 +36,27 @@ function mag(){
 
     # If $1 = compile
     if [ "$1" = "compile" ]; then
-        docker-compose exec app bash -c "bin/magento setup:di:compile" && notify-send "Magento compiled!"
+        docker-compose exec app bash -c "bin/magento setup:di:compile"
     fi
 
-    # if $2 is set, exit
-    if [ "$2" ]; then
-        exit 0
-    else
-        cd -
+    # If $1 = compile
+    if [ "$1" = "flush" ]; then
+        docker-compose exec app bash -c "bin/magento cache:flush"
     fi
+
+    # check if successfull
+    if [ "$?" = "0" ]; then
+        notify-send "The command "$1" was successful!"
+
+        # if $2 is set, exit
+        if [ "$2" ]; then
+            exit 0
+        fi
+    else
+        notify-send --urgency=critical "The command "$1" was not successful!"
+    fi
+
+    cd -
 }
 
 function mpush(){
