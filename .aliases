@@ -31,6 +31,17 @@ alias cmr='cm && r'
 alias lock='sudo umount ~/Documents'
 alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
 
+function work_timer(){
+    link=https://n8n.hryszko.dev/webhook/5c964c53-329f-4480-aeab-57bae420ae4c
+
+    echo "Wait, the timer is loading. . ."
+    curl -s $link > /tmp/work_timer.txt
+
+    termdown -T "Today left" $(cat /tmp/work_timer.txt | jq '.today.left')m &&
+    termdown -T "Missing time" $(cat /tmp/work_timer.txt | jq '.missing_time.missing')m &&
+    termdown -T "overtime"
+}
+
 function mpush(){
     VPN="chop-chop2"
 

@@ -23,7 +23,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%+
-bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%- 
+bindsym XF86MonBrightnessDown exec sudo brightnessctl -d `sudo brightnessctl -l | head -2 | tail -1 | cut -d ' ' -f 2 | cut -d "'" -f 2` set 5%-
 
 # Auto run
 exec --no-startup-id libinput-gestures-setup start
@@ -34,7 +34,7 @@ exec syncthing
 exec notify-send -t 0 "Last login information" "$(last reboot | head -2 | tail -1 | cut -d\. -f 3 | cut -d " " -f 2,3,4,5,6,7,8,9)"
 exec sleep 60 && kdeconnect-indicator
 
-## System things 
+## System things
 exec nm-applet # sth with system notifications
 exec setxkbmap pl -option kpdl:dot #numpad comma -> dot
 exec --no-startup-id dunst
@@ -56,15 +56,15 @@ bindsym $mod+Shift+f exec ~/Scripts/my-scripts/tiny_scripts/launch.sh
 bindsym $mod+Shift+equal exec $HOME/Scripts/my-scripts/sendToNotion.sh
 bindsym $mod+period exec /home/simon/Scripts/rofi-emoji.sh
 bindsym $mod+v exec copyq show
-bindsym Shift+Ctrl+space exec flameshot gui 
+bindsym Shift+Ctrl+space exec flameshot gui
 bindsym $mod+Shift+F3 exec xdg-open ~
-bindsym $mod+Return exec gnome-terminal -e zsh || gnome-terminal 
+bindsym $mod+Return exec gnome-terminal -e zsh || gnome-terminal
 bindsym $mod+Shift+Ctrl+s exec "/home/simon/.config/polybar/scripts/powermenu.sh"
 bindsym Print exec flameshot screen -c
 bindsym $mod+l exec i3lock-fancy -p
 
 bindsym $mod+Shift+q kill
-bindsym --release Num_Lock exec numlockx on #numlock always on 
+bindsym --release Num_Lock exec numlockx on #numlock always on
 bindsym $mod+Shift+r exec /home/simon/Scripts/my-scripts/restart.sh
 
 # make something sticky (visible on all workspaces)
@@ -168,6 +168,14 @@ bindsym $mod+mod1+Left move container to output left
 bindsym $mod+mod1+Right move container to output right
 bindsym $mod+mod1+Down move container to output down
 bindsym $mod+mod1+Up move container to output up
+
+bindsym $mod+Ctrl+q move container to output left
+bindsym $mod+Ctrl+w move container to output right
+bindsym $mod+Ctrl+e move container to output right
+
+bindsym $mod+Shift+Ctrl+q move container to output left
+bindsym $mod+Shift+Ctrl+w move container to output right
+bindsym $mod+Shift+Ctrl+e move container to output right
 
 # Change focus output
 bindsym $mod+mod1+Ctrl+Right focus output right
