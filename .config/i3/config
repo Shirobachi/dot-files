@@ -192,6 +192,7 @@ for_window [class="Display-im6.q16"] floating enable
 for_window [class="Tk"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="Gnome-terminal"] floating enable
 
 # Make moveable my mouse
 floating_modifier $mod

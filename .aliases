@@ -31,36 +31,8 @@ alias cmr='cm && r'
 alias lock='sudo umount ~/Documents'
 alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
 
-function mag(){
-    cd $MAGENTO_PATH
-
-    # If $1 = compile
-    if [ "$1" = "compile" ]; then
-        docker-compose exec app bash -c "bin/magento setup:di:compile"
-    fi
-
-    # If $1 = compile
-    if [ "$1" = "flush" ]; then
-        docker-compose exec app bash -c "bin/magento cache:flush"
-    fi
-
-    # check if successfull
-    if [ "$?" = "0" ]; then
-        notify-send "The command "$1" was successful!"
-
-        # if $2 is set, exit
-        if [ "$2" ]; then
-            exit 0
-        fi
-    else
-        notify-send --urgency=critical "The command "$1" was not successful!"
-    fi
-
-    cd -
-}
-
 function mpush(){
-    VPN="chop-chop"
+    VPN="chop-chop2"
 
     # Try to connect to the VPN
     VPN_ID=$(nmcli con | grep "$VPN" | awk '{print $2}')
