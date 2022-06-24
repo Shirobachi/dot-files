@@ -37,9 +37,12 @@ function work_timer(){
     echo "Wait, the timer is loading. . ."
     curl -s $link > /tmp/work_timer.txt
 
-    termdown -T "Today left" $(cat /tmp/work_timer.txt | jq '.today.left')m &&
-    termdown -T "Missing time" $(cat /tmp/work_timer.txt | jq '.missing_time.missing')m &&
-    termdown -T "overtime"
+    today=$(cat /tmp/work_timer.txt | jq '.today.left')
+    missing=$(cat /tmp/work_timer.txt | jq '.missing_time.missing')
+
+    termdown -esT "Today" "$today"m &&
+    termdown -esT "Missing" "$missing"m &&
+    termdown -T "OVERTIME"
 }
 
 function mpush(){

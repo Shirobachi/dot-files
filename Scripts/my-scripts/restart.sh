@@ -7,9 +7,9 @@ notify-send "Reloading ..."
 # Get possition from $HOME/Documents/.env/external_screen_possition
 possition=$(cat "$HOME"/Documents/.env/external_screen_possition)
 
-# if possition is empty set it above
-if [ -z "$possition" ]; then
-	possition="above"
+# if possition is not above, left-of, right-of, or below, then set to default
+if [ "$possition" != "above" ] && [ "$possition" != "left-of" ] && [ "$possition" != "right-of" ] && [ "$possition" != "below" ]; then
+    possition="right-of"
 fi
 
 # set screen setup
