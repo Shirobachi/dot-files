@@ -63,6 +63,7 @@ bindsym $mod+Return exec gnome-terminal -e zsh || gnome-terminal
 bindsym $mod+Shift+Ctrl+s exec "/home/simon/.config/polybar/scripts/powermenu.sh"
 bindsym Print exec flameshot screen -c
 bindsym $mod+l exec i3lock-fancy -p
+bindsym $mod+Shift+z exec /home/simon/Scripts/my-scripts/swapVPN.sh
 
 bindsym $mod+Shift+q kill
 bindsym --release Num_Lock exec numlockx on #numlock always on

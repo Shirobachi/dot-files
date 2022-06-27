@@ -3,6 +3,7 @@ export PATH="$PATH:/home/simon/Apps/bin"
 export VISUAL=vim;
 export EDITOR=vim;
 export MAGENTO_PATH="/home/simon/Documents/magently/training/mde/"
+export MP="/home/simon/Documents/magently/training/project/"
 
 alias mkdir='mkdir -pv'
 alias ll="ls -lAh"
@@ -38,10 +39,17 @@ function work_timer(){
     curl -s $link > /tmp/work_timer.txt
 
     today=$(cat /tmp/work_timer.txt | jq '.today.left')
-    missing=$(cat /tmp/work_timer.txt | jq '.missing_time.missing')
+    missing=$(cat /tmp/work_timer.txt | jq '.missing_time.left')
+    started=$(cat /tmp/work_timer.txt | jq '.toggle.started')
 
-    termdown -esT "Today" "$today"m &&
-    termdown -esT "Missing" "$missing"m &&
+    # if not started timer, exit with information
+    if [ "$started" = "false" ]; then
+        figlet "Timer is not started. . ."
+        return
+    fi
+
+    termdown -es "$today"m &&
+    termdown -es "$missing"m &&
     termdown -T "OVERTIME"
 }
 
