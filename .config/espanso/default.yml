@@ -14,7 +14,6 @@ matches:
   - trigger: ":degree"
     replace: "°"
 
-  
   - trigger: ":@"
     replace: "simon@hryszko.dev"
 
@@ -25,7 +24,7 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%m-%d-%Y"
 
   # Shell commands
   - trigger: ":shell"
