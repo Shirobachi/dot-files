@@ -1,9 +1,9 @@
 #!/bin/bash
-export PATH="$PATH:/home/simon/Apps/bin"
+export PATH="$PATH:/home/simon/Apps/bin:/home/simon/.composer/vendor/bin"
 export VISUAL=vim;
 export EDITOR=vim;
 export MAGENTO_PATH="/home/simon/Documents/magently/training/mde/"
-export MP="/home/simon/Documents/magently/training/project/"
+export MP="$MAGENTO_PATH/../magento"
 
 alias mkdir='mkdir -pv'
 alias ll="ls -lAh"
