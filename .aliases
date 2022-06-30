@@ -32,6 +32,25 @@ alias cmr='cm && r'
 alias lock='sudo umount ~/Documents'
 alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
 
+function s(){
+    command=$(history | grep -v "s $1" | grep -v grep | grep "$1" | tail -1 | awk '{for(i=4;i<=NF;i++) printf $i" ";}')
+
+    # ask if that command is correct
+    echo -e "\nCommand: $command\n"
+    echo "Is this the command you want to run? [any key to continue, ctrl+c to cancel]"
+
+    read
+    if [ $? -eq 0 ]; then
+        echo "Running command: $command"
+        eval $command
+    fi
+
+    # if $2 = 'q' then exit
+    if [ "$2" = "q" ]; then
+        exit
+    fi
+}
+
 function work_timer(){
     link=https://n8n.hryszko.dev/webhook/5c964c53-329f-4480-aeab-57bae420ae4c
 
