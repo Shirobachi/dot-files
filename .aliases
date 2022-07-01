@@ -45,8 +45,8 @@ function s(){
         eval $command
     fi
 
-    # if $2 = 'q' then exit
-    if [ "$2" = "q" ]; then
+    # if $2 != 'Q' then exit
+    if [[ $2 != 'Q' ]]; then
         exit
     fi
 }
