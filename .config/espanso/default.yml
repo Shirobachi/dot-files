@@ -33,4 +33,19 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "echo Hello from your shell"
+          cmd: "echo HELLO FROM YOUR SHEll"
+
+  - trigger: "@@"
+    replace: "{{output}}"
+    vars:
+      - name: random 8 letter
+        type: random
+        params:
+          length: 8
+          charset: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+      # add '@hryszko.dev'
+      - name: output
+        type: append
+        params:
+          value: "@hryszko.dev"
