@@ -207,5 +207,26 @@ for_window [class="Blueman-manager"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Gnome-terminal"] floating enable
 
+mode "resize" {
+    # The bindsym for change
+    bindsym Left        resize shrink width 10 px or 10 ppt
+    bindsym Down        resize grow height 10 px or 10 ppt
+    bindsym Up          resize shrink height 10 px or 10 ppt
+    bindsym Right       resize grow width 10 px or 10 ppt
+
+    bindsym Ctrl+Left        resize shrink width 100 px or 100 ppt
+    bindsym Ctrl+Down        resize grow height 100 px or 100 ppt
+    bindsym Ctrl+Up          resize shrink height 100 px or 100 ppt
+    bindsym Ctrl+Right       resize grow width 100 px or 100 ppt
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"
+
+
 # Make moveable my mouse
 floating_modifier $mod
