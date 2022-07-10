@@ -122,7 +122,7 @@ set $ws9 9
 set $ws0 0
 
 # Assign app to workspace
-assign [class="Transmission-gtk"] 9
+assign [class="Transmission-gtk"] 0
 
 # Assign workspace 0th to external screen
 workspace 0 output DP-0
