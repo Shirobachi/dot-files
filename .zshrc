@@ -4,6 +4,17 @@ export ZSH="/home/simon/.oh-my-zsh"
 plugins=(zsh-autosuggestions z sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+function git_branch_name()
+{
+    branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+    if [[ $branch == "" ]];
+    then
+        :
+    else
+        echo "🔀 <$branch>"
+    fi
+}
+
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
@@ -31,7 +42,7 @@ function precmd() {
 }
 
 PROMPT="[%F{yellow}%n%F{green}@%F{blue}%m%f] %F{magenta}%~ %F{green}⇨%f "
-RPROMPT='%(?.%F{cyan}Took ${ETIME}s.%F{red}Retuned: %?)${vcs_info_msg_0_} %F{magenta}[ %D{%l:%M:%S} ]'
+RPROMPT='%(?.%F{cyan}Took ${ETIME}s.%F{red}Retuned: %?)${vcs_info_msg_0_} %F{magenta}[%D{%l:%M:%S} ] $(git_branch_name)'
 
 export LANG=en_US.UTF-8
 
