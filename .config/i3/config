@@ -34,6 +34,8 @@ exec syncthing
 exec notify-send -t 0 "Last login information" "$(last reboot | head -2 | tail -1 | cut -d\. -f 3 | cut -d " " -f 2,3,4,5,6,7,8,9)"
 exec sleep 60 && kdeconnect-indicator
 exec transmission-gtk
+exec google-chrome
+exec Obsidian-0.14.6.AppImage
 
 ## System things
 exec nm-applet # sth with system notifications
@@ -123,6 +125,8 @@ set $ws0 0
 
 # Assign app to workspace
 assign [class="Transmission-gtk"] 0
+assign [class="Google-chrome"] 1
+assign [class="obsidian"] 3
 
 # Assign workspace 0th to external screen
 workspace 0 output DP-0
