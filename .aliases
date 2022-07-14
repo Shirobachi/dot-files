@@ -33,16 +33,14 @@ alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=
 
 alias gb='git branch'
 alias gB='git branch -vvvv'
-alias gba='git branch -a'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gdca='git diff --cached --staged'
-alias gdcaa='git diff --cached --staged --name-only'
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --date=relative'
-alias gla='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --date=relative --all'
+alias gL='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --date=relative --all'
 alias gC='git checkout'
+
+alias d='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && q'
+alias dd='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && rm -r $MP/generated/code && q'
+alias ddd='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && rm -r $MP/generated/code && docker-compose exec app bin/magento set:up && q'
+
 
 
 function lock(){
@@ -78,13 +76,13 @@ function work_timer(){
     echo "Wait, the timer is loading. . ."
     curl -s $link > /tmp/work_timer.txt
 
-    today=$(cat /tmp/work_timer.txt | jq '.today.left')
-    missing=$(cat /tmp/work_timer.txt | jq '.missing_time.left')
-    started=$(cat /tmp/work_timer.txt | jq '.toggle.started')
+    today=$(cat /tmp/work_timer.txt | jq '.answer.today')
+    missing=$(cat /tmp/work_timer.txt | jq '.answer.overtime')
+    started=$(cat /tmp/work_timer.txt | jq '.info.timerOn')
 
     # if not started timer, exit with information
     if [ "$started" = "false" ]; then
-        figlet "Timer is not started. . ."
+        cowsay -f "$(ls /usr/share/cowsay/cows/ | shuf | head -1 | cut -d . -f1)" "Get to fucking work bro!"
         return
     fi
 
