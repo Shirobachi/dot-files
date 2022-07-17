@@ -17,8 +17,11 @@ function saveLayout() {
 	# Remove old layout
 	rm -rf "$HOME/.i3" "$HOME/.config/i3-resurrect"
 
+  # Backup second mind
+  backupObsidian
+
   # Send work TS
-  cd /home/simon/Documents/magently/toggl2redmine/ && sh toggl.sh  >> /home/simon/Documents/magently/toggl2redmine/toggl2redmine.log
+  #cd /home/simon/Documents/magently/toggl2redmine/ && sh toggl.sh  >> /home/simon/Documents/magently/toggl2redmine/toggl2redmine.log
 	
   # for 0..9
 	for i in {0..9}; do

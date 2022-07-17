@@ -30,6 +30,8 @@ alias b='cd ~/.Downloads; run_remote_file python3 https://gist.githubusercontent
 alias cm='cd $MP'
 alias cmr='cm && r'
 alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
+alias backupObsidia='cd /home/simon/Second-brain && git add . && git commit -m "Update second brain" && git push'
+
 
 alias gb='git branch'
 alias gB='git branch -vvvv'
