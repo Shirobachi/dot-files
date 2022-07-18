@@ -42,7 +42,7 @@ alias gC='git checkout'
 alias d='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && q'
 alias dd='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && rm -r $MP/generated/code && q'
 alias ddd='cd $MAGENTO_PATH && docker-compose exec app bin/magento c:f && rm -r $MP/generated/code && docker-compose exec app bin/magento set:up && q'
-
+alias D='cd $MAGENTO_PATH && rm -rf generated/*; rm -rf var/view_preprocessed/*; rm -rf var/cache/*; rm -rf var/page_cache/* && q'
 
 
 function lock(){
