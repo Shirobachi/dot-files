@@ -80,6 +80,7 @@ function work_timer(){
 
     today=$(cat /tmp/work_timer.txt | jq '.answer.today')
     missing=$(cat /tmp/work_timer.txt | jq '.answer.overtime')
+    sum=$(cat /tmp/work_timer.txt | jq '.answer.summary')
     started=$(cat /tmp/work_timer.txt | jq '.info.timerOn')
 
     # if not started timer, exit with information
@@ -88,8 +89,9 @@ function work_timer(){
         return
     fi
 
-    termdown -es "$today"m &&
-    termdown -es "$missing"m &&
+    # termdown -es "$today"m &&
+    # termdown -es "$missing"m &&
+    termdown -es "$sum"m &&
     termdown -T "OVERTIME"
 }
 
