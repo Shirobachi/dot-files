@@ -31,7 +31,7 @@ alias cm='cd $MP'
 alias cmr='cm && r'
 alias unlock='sudo mount -t ecryptfs ~/Documents ~/Documents -o ecryptfs_cipher=aes,ecryptfs_key_bytes=32,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=no,ecryptfs_sig=$(cat /home/simon/.sig-key.txt)'
 alias backupObsidia='cd /home/simon/Phone/Second-brain && git add .; git commit -m "Update second brain"; git push'
-
+alias turnOff='killall google-chrome; /home/simon/Scripts/my-scripts/sessionManager.sh -s; systemctl poweroff'
 
 alias gb='git branch'
 alias gB='git branch -vvvv'
